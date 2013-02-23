@@ -2,14 +2,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
-	<form action="${pageContext.request.contextPath}/servlet/login/Validate" method ="post">
+	<form
+		action="${pageContext.request.contextPath}/servlet/login/Validate"
+		method="post">
 		Usuario: <input type="text" name="user"><br> Clave: <input
-			type="password" name="password">
-			<br>
-			<input type="submit">
+			type="password" name="password"> <br> <input
+			type="submit">
 	</form>
 </body>
 </html>

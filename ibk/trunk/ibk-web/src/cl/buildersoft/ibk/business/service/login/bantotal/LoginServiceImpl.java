@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.business.service.bantotal;
+package cl.buildersoft.ibk.business.service.login.bantotal;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -10,15 +10,17 @@ import cl.buildersoft.framework.database.BSmySQL;
 import cl.buildersoft.framework.exception.BSDataBaseException;
 import cl.buildersoft.framework.util.BSSecurity;
 import cl.buildersoft.framework.util.BSUtils;
-import cl.buildersoft.ibk.business.service.LoginService;
-import cl.buildersoft.ibk.business.service.LoginStatusEnum;
+import cl.buildersoft.ibk.bean.Bank;
+import cl.buildersoft.ibk.bean.User;
+import cl.buildersoft.ibk.business.service.login.LoginService;
+import cl.buildersoft.ibk.business.service.login.LoginStatusEnum;
+
 
 public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public LoginStatusEnum validate(HttpServletRequest request, String user, String password) {
-		/**
-		 * <code>
+
 		BSmySQL mysql = new BSmySQL();
 		Connection conn = mysql.getConnection(request);
 
@@ -26,18 +28,28 @@ public class LoginServiceImpl implements LoginService {
 		password = security.md5(password);
 
 		ResultSet rs = mysql.callSingleSP(conn, "pLogin", BSUtils.array2List(user, password));
-		Boolean out = Boolean.FALSE;
+		LoginStatusEnum out = LoginStatusEnum.INCORRECT;
 
 		try {
 			if (rs.next()) {
-				out = Boolean.TRUE;
+				out = LoginStatusEnum.CORRECT;
 			}
 		} catch (SQLException e) {
 			throw new BSDataBaseException(e);
 		}
-</code>
-		 */
-		return LoginStatusEnum.CORRECT;
+		return out;
+	}
+
+	@Override
+	public Bank getMainBank(HttpServletRequest request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User getUser(HttpServletRequest request, String user) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
