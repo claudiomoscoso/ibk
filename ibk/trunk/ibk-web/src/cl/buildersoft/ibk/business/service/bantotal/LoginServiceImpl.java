@@ -11,11 +11,14 @@ import cl.buildersoft.framework.exception.BSDataBaseException;
 import cl.buildersoft.framework.util.BSSecurity;
 import cl.buildersoft.framework.util.BSUtils;
 import cl.buildersoft.ibk.business.service.LoginService;
+import cl.buildersoft.ibk.business.service.LoginStatusEnum;
 
 public class LoginServiceImpl implements LoginService {
 
 	@Override
-	public Boolean validate(HttpServletRequest request, String user, String password) {
+	public LoginStatusEnum validate(HttpServletRequest request, String user, String password) {
+		/**
+		 * <code>
 		BSmySQL mysql = new BSmySQL();
 		Connection conn = mysql.getConnection(request);
 
@@ -32,8 +35,9 @@ public class LoginServiceImpl implements LoginService {
 		} catch (SQLException e) {
 			throw new BSDataBaseException(e);
 		}
-
-		return out;
+</code>
+		 */
+		return LoginStatusEnum.CORRECT;
 	}
 
 }
