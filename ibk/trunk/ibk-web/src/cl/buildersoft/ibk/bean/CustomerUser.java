@@ -1,5 +1,5 @@
 package cl.buildersoft.ibk.bean;
 
-public class User {
+public class CustomerUser {
 
 }

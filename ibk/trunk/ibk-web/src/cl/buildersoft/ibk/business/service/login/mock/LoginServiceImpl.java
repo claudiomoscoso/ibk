@@ -3,7 +3,7 @@ package cl.buildersoft.ibk.business.service.login.mock;
 import javax.servlet.http.HttpServletRequest;
 
 import cl.buildersoft.ibk.bean.Bank;
-import cl.buildersoft.ibk.bean.User;
+import cl.buildersoft.ibk.bean.CustomerUser;
 import cl.buildersoft.ibk.business.service.login.LoginService;
 import cl.buildersoft.ibk.business.service.login.LoginStatusEnum;
 
@@ -22,8 +22,8 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	@Override
-	public User getUser(HttpServletRequest request, String user) {
-		// TODO Auto-generated method stub
+	public CustomerUser getUser(HttpServletRequest request, String user) {
+		
 		return null;
 	}
 
