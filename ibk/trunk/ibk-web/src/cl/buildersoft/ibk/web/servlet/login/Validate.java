@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cl.buildersoft.ibk.business.service.login.LoginService;
-import cl.buildersoft.ibk.business.service.login.LoginStatusEnum;
+import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 import cl.buildersoft.ibk.util.BSFactory;
 
 @WebServlet("/servlet/login/Validate")
