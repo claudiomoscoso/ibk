@@ -1,6 +1,6 @@
 package cl.buildersoft.ibk.bean;
 
-public class Bank {
+public class Bank extends BSAbstractBean {
 	private String name = null;
 	private String logo = null;
 

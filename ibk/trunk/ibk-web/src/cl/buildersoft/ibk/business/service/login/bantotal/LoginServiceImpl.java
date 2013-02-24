@@ -13,7 +13,7 @@ import cl.buildersoft.framework.util.BSUtils;
 import cl.buildersoft.ibk.bean.Bank;
 import cl.buildersoft.ibk.bean.CustomerUser;
 import cl.buildersoft.ibk.business.service.login.LoginService;
-import cl.buildersoft.ibk.business.service.login.LoginStatusEnum;
+import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 
 
 public class LoginServiceImpl implements LoginService {

@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import cl.buildersoft.ibk.bean.Bank;
 import cl.buildersoft.ibk.bean.CustomerUser;
+import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 
 public interface LoginService {
 	public LoginStatusEnum validate(HttpServletRequest request, String user, String password);
