@@ -47,7 +47,7 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	@Override
-	public CustomerUser getUser(HttpServletRequest request, String user) {
+	public CustomerUser getCustomerUser(HttpServletRequest request, String user) {
 		// TODO Auto-generated method stub
 		return null;
 	}
