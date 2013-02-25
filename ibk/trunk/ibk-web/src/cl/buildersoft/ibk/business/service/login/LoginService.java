@@ -9,7 +9,7 @@ import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 public interface LoginService {
 	public LoginStatusEnum validate(HttpServletRequest request, String user, String password);
 
-	public CustomerUser getUser(HttpServletRequest request, String user);
+	public CustomerUser getCustomerUser(HttpServletRequest request, String user);
 
 	public Bank getMainBank(HttpServletRequest request);
 

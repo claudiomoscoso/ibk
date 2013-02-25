@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import cl.buildersoft.ibk.business.service.login.LoginService;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
@@ -27,8 +28,14 @@ public class Validate extends HttpServlet {
 
 		LoginStatusEnum status = service.validate(request, user, password);
 
-		System.out.println(status);
+		if (status.equals(LoginStatusEnum.CORRECT)) {
+			HttpSession session = request.getSession(true);
+			
+			session.setAttribute("CustomerUser", service.getCustomerUser(request, user));
+			session.setAttribute("MainBank", service.getMainBank(request));
 
+		}
+
+		request.getRequestDispatcher("/WEB-INF/jsp/main/main-page.jsp").forward(request, response);
 	}
-
 }
