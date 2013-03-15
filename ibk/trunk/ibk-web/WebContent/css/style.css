@@ -1,3 +1,4 @@
+@CHARSET "UTF-8";
 input:focus, textarea:focus, select:focus
 {
 	BORDER-RIGHT: black 1px solid;
