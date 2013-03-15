@@ -28,14 +28,16 @@ public class Validate extends HttpServlet {
 
 		LoginStatusEnum status = service.validate(request, user, password);
 
+		String url = "";
 		if (status.equals(LoginStatusEnum.CORRECT)) {
 			HttpSession session = request.getSession(true);
-			
+
 			session.setAttribute("CustomerUser", service.getCustomerUser(request, user));
 			session.setAttribute("MainBank", service.getMainBank(request));
+			url = "/WEB-INF/jsp/main/main-page.jsp";
 
 		}
 
-		request.getRequestDispatcher("/WEB-INF/jsp/main/main-page.jsp").forward(request, response);
+		request.getRequestDispatcher(url ).forward(request, response);
 	}
 }
