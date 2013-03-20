@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.business.service.login;
+package cl.buildersoft.ibk.business.service.customer;
 
 import javax.servlet.http.HttpServletRequest;
 

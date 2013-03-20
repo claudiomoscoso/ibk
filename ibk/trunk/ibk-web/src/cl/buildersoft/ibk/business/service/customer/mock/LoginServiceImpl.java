@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.business.service.login.mock;
+package cl.buildersoft.ibk.business.service.customer.mock;
 
 import java.util.Calendar;
 
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import cl.buildersoft.framework.util.BSWeb;
 import cl.buildersoft.ibk.bean.Bank;
 import cl.buildersoft.ibk.bean.CustomerUser;
-import cl.buildersoft.ibk.business.service.login.LoginService;
+import cl.buildersoft.ibk.business.service.customer.LoginService;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 
 public class LoginServiceImpl implements LoginService {
@@ -40,9 +40,9 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	private String getRandomName() {
-		String names[] = { "Juan Carlos Arancibia Hernandez", "José Hernesto Lopez Soto", "Miguel Angel Perez Lopez",
+		String names[] = { "Juan Carlos Arancibia Hernandez", "Josï¿½ Hernesto Lopez Soto", "Miguel Angel Perez Lopez",
 				"Katherine Nicole Hernandez Rojas", "Gabriela Mariana Castillo Strange", "Veronica Viviana Solis Rojas",
-				"Valentina Amanda Nuñez Bravo", "Julio Eduardo Cerda Lopez", "Oscar Mauricio Jimenez Vega",
+				"Valentina Amanda Nuï¿½ez Bravo", "Julio Eduardo Cerda Lopez", "Oscar Mauricio Jimenez Vega",
 				"Raquel del Carmen Valdez Sandoval" };
 
 		return names[number0to9()];
