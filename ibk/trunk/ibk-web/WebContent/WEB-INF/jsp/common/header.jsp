@@ -1,11 +1,11 @@
-<%@page import="cl.buildersoft.ibk.bean.CustomerUser"%>
+<%@page import="cl.buildersoft.ibk.bean.Customer"%>
 <%@page import="cl.buildersoft.ibk.bean.Bank"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	Bank mainBank = (Bank) request.getSession().getAttribute("MainBank");
-	CustomerUser customerUser = (CustomerUser) request.getSession().getAttribute("CustomerUser");
+Customer customerUser =(Customer) request.getSession().getAttribute("Customer");
 %>
 <html>
 <head>

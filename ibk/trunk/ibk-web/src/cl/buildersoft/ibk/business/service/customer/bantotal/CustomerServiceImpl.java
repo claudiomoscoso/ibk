@@ -11,12 +11,11 @@ import cl.buildersoft.framework.exception.BSDataBaseException;
 import cl.buildersoft.framework.util.BSSecurity;
 import cl.buildersoft.framework.util.BSUtils;
 import cl.buildersoft.ibk.bean.Bank;
-import cl.buildersoft.ibk.bean.CustomerUser;
-import cl.buildersoft.ibk.business.service.customer.LoginService;
+import cl.buildersoft.ibk.bean.Customer;
+import cl.buildersoft.ibk.business.service.customer.CustomerService;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 
-
-public class LoginServiceImpl implements LoginService {
+public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public LoginStatusEnum validate(HttpServletRequest request, String user, String password) {
@@ -41,13 +40,7 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	@Override
-	public Bank getMainBank(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public CustomerUser getCustomerUser(HttpServletRequest request, String user) {
+	public Customer getBasicInformation(HttpServletRequest request, String user) {
 		// TODO Auto-generated method stub
 		return null;
 	}

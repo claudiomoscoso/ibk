@@ -2,7 +2,7 @@ package cl.buildersoft.ibk.bean;
 
 import java.util.Calendar;
 
-public class CustomerUser extends BSAbstractBean {
+public class Customer extends BSAbstractBean {
 	private String id = null;
 	private String name = null;
 	private Calendar lastLoginSuccess = null;
