@@ -3,7 +3,7 @@ package cl.buildersoft.ibk.util;
 import javax.servlet.ServletContext;
 
 import cl.buildersoft.framework.exception.BSConfigurationException;
-import cl.buildersoft.ibk.business.service.login.LoginService;
+import cl.buildersoft.ibk.business.service.customer.LoginService;
 
 public class BSFactory {
 	public LoginService getLoginService(ServletContext context) {

@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.business.service.login.bantotal;
+package cl.buildersoft.ibk.business.service.customer.bantotal;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -12,7 +12,7 @@ import cl.buildersoft.framework.util.BSSecurity;
 import cl.buildersoft.framework.util.BSUtils;
 import cl.buildersoft.ibk.bean.Bank;
 import cl.buildersoft.ibk.bean.CustomerUser;
-import cl.buildersoft.ibk.business.service.login.LoginService;
+import cl.buildersoft.ibk.business.service.customer.LoginService;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 
 
