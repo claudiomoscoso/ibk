@@ -2,15 +2,13 @@ package cl.buildersoft.ibk.business.service.customer;
 
 import javax.servlet.http.HttpServletRequest;
 
-import cl.buildersoft.ibk.bean.Bank;
-import cl.buildersoft.ibk.bean.CustomerUser;
+import cl.buildersoft.ibk.bean.Customer;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 
-public interface LoginService {
+public interface CustomerService {
 	public LoginStatusEnum validate(HttpServletRequest request, String user, String password);
 
-	public CustomerUser getCustomerUser(HttpServletRequest request, String user);
+	public Customer getBasicInformation(HttpServletRequest request, String user);
 
-	public Bank getMainBank(HttpServletRequest request);
 
 }

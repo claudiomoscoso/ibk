@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import cl.buildersoft.ibk.business.service.customer.LoginService;
+import cl.buildersoft.ibk.bean.Customer;
+import cl.buildersoft.ibk.business.service.bank.BankService;
+import cl.buildersoft.ibk.business.service.customer.CustomerService;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 import cl.buildersoft.ibk.util.BSFactory;
 
@@ -24,20 +26,23 @@ public class Validate extends HttpServlet {
 
 		BSFactory factory = new BSFactory();
 		ServletContext config = getServletContext();
-		LoginService service = factory.getLoginService(config);
+		CustomerService customerService = factory.getCustomerService(config);
 
-		LoginStatusEnum status = service.validate(request, user, password);
+		LoginStatusEnum status = customerService.validate(request, user, password);
 
 		String url = "";
 		if (status.equals(LoginStatusEnum.CORRECT)) {
 			HttpSession session = request.getSession(true);
 
-			session.setAttribute("CustomerUser", service.getCustomerUser(request, user));
-			session.setAttribute("MainBank", service.getMainBank(request));
+			BankService bankService = factory.getBankService(config);
+			Customer customer = customerService.getBasicInformation(request, user);
+
+			session.setAttribute("CustomerUser", customer);
+			session.setAttribute("MainBank", bankService.getMainBank(request, customer));
 			url = "/WEB-INF/jsp/main/main-page.jsp";
 
 		}
 
-		request.getRequestDispatcher(url ).forward(request, response);
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 }
