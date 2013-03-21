@@ -1,6 +1,5 @@
 package cl.buildersoft.ibk.bean;
 
-import java.util.Calendar;
 
 public class Customer extends BSAbstractBean {
 	private String id = null;
