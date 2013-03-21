@@ -1,10 +1,15 @@
 package cl.buildersoft.ibk.business.service.bank.mock;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
+import cl.buildersoft.framework.util.BSWeb;
 import cl.buildersoft.ibk.bean.Bank;
 import cl.buildersoft.ibk.bean.Customer;
 import cl.buildersoft.ibk.bean.Officer;
+import cl.buildersoft.ibk.bean.Product;
 import cl.buildersoft.ibk.business.service.bank.BankService;
 
 public class BankServiceImpl implements BankService {
@@ -20,8 +25,37 @@ public class BankServiceImpl implements BankService {
 
 	@Override
 	public Officer getOfficer(HttpServletRequest request, Customer customer) {
-		// TODO Auto-generated method stub
-		return null;
+		Officer out = new Officer();
+
+		out.setEmail("user@server.com");
+		out.setId(BSWeb.randomString());
+		out.setName("Juan Inostroza Perez");
+		out.setPhone("05-2718.2282");
+
+		return out;
 	}
+
+	@Override
+	public List<Product> listProducts(HttpServletRequest request) {
+		List <Product> listOut = new ArrayList <Product> ();
+				
+		listOut.add(getProduct("ABC", "Cuenta Corriente", null));
+		listOut.add(getProduct("DEF", "Ahorro", null));
+		listOut.add(getProduct("GHI", "Cuenta Plazos", null));
+		listOut.add(getProduct("JKL", "Fondos Mutuos", null));
+				
+		return listOut;
+	}
+
+	private Product getProduct(String key, String name, String parent) {
+		Product out = new Product();
+		out.setKey(key);
+		out.setName(name);
+		out.setParent(parent);
+
+		return out;
+	}
+	
+	
 
 }
