@@ -8,7 +8,6 @@
 <title>Login</title>
 </head>
 <body>
-Wrong!
 	<form
 		action="${pageContext.request.contextPath}/servlet/login/Validate?<%=BSWeb.randomString() %>"
 		method="post">

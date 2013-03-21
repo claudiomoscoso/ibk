@@ -5,19 +5,18 @@
 	version="3.0">
 	<display-name>ibk-web</display-name>
 	<welcome-file-list>
-		<welcome-file>public/index.jsp</welcome-file>
+		<welcome-file>portal/Welcome</welcome-file>
 	</welcome-file-list>
-
+	<!-- 
 	<context-param>
 		<param-name>cl.buildersoft.ibk.core.name</param-name>
 		<param-value>mock</param-value>
 	</context-param>
-
-	<!-- <context-param> <param-name>bsframework.database.driver</param-name> 
-		<param-value>org.gjt.mm.mysql.Driver</param-value> </context-param> <context-param> 
-		<param-name>bsframework.database.server</param-name> <param-value>localhost</param-value> 
-		</context-param> <context-param> <param-name>bsframework.database.database</param-name> 
-		<param-value>bsframework</param-value> </context-param> <context-param> <param-name>bsframework.database.username</param-name> 
-		<param-value>root</param-value> </context-param> <context-param> <param-name>bsframework.database.password</param-name> 
-		<param-value>admin</param-value> </context-param> -->
+	 -->
+	 
+	<servlet>
+		<servlet-name>StartupServlet</servlet-name>
+		<servlet-class>cl.buildersoft.ibk.web.servlet.StartupServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 </web-app>
