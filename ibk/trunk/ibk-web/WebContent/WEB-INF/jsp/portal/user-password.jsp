@@ -9,7 +9,7 @@
 </head>
 <body>
 	<form
-		action="${pageContext.request.contextPath}/servlet/login/Validate?<%=BSWeb.randomString() %>"
+		action="${pageContext.request.contextPath}/servlet/login/ValidateUserPassword?<%=BSWeb.randomString() %>"
 		method="post">
 		Usuario: <input type="text" name="user"><br> Clave: <input
 			type="password" name="password"> <br> <input

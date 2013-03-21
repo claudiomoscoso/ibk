@@ -3,15 +3,21 @@ package cl.buildersoft.ibk.business.service.security.mock;
 import javax.servlet.http.HttpServletRequest;
 
 import cl.buildersoft.ibk.bean.Antiphishing;
+import cl.buildersoft.ibk.bean.User;
 import cl.buildersoft.ibk.business.service.security.SecurityService;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 
 public class SecurityServiceImpl implements SecurityService {
 
 	@Override
-	public Boolean validateUserId(HttpServletRequest request, String user) {
-		// LoginStatusEnum out = LoginStatusEnum.CORRECT;
-		return Boolean.TRUE;
+	public User validateUserId(HttpServletRequest request, String userId) {
+		User user = null;
+
+		if (userId.length() > 0) {
+			user = new User();
+			user.setId(userId);
+		}
+		return user;
 	}
 
 	@Override
@@ -41,7 +47,7 @@ public class SecurityServiceImpl implements SecurityService {
 	@Override
 	public void setAntiphishingInfo(HttpServletRequest request, String userId, Antiphishing antiphishing) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
