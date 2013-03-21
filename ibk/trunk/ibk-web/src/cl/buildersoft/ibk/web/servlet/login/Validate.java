@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import cl.buildersoft.ibk.bean.Customer;
 import cl.buildersoft.ibk.business.service.bank.BankService;
 import cl.buildersoft.ibk.business.service.customer.CustomerService;
-import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
+import cl.buildersoft.ibk.business.service.security.SecurityService;
 import cl.buildersoft.ibk.util.BSFactory;
 
 @WebServlet("/servlet/login/Validate")
@@ -26,15 +26,16 @@ public class Validate extends HttpServlet {
 
 		BSFactory factory = new BSFactory();
 		ServletContext config = getServletContext();
-		CustomerService customerService = factory.getCustomerService(config);
+		SecurityService securityService = factory.getSecurityService(config);
 
-		LoginStatusEnum status = customerService.validate(request, user, password);
+		Boolean status = securityService.validateUserId(request, user);
 
 		String url = "";
-		if (status.equals(LoginStatusEnum.CORRECT)) {
+		if (status.equals(Boolean.TRUE)) {
 			HttpSession session = request.getSession(true);
 
 			BankService bankService = factory.getBankService(config);
+			CustomerService customerService = factory.getCustomerService(config);
 			Customer customer = customerService.getBasicInformation(request, user);
 
 			session.setAttribute("CustomerUser", customer);

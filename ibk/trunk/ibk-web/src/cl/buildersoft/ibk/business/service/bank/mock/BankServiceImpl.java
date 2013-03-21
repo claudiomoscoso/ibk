@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import cl.buildersoft.ibk.bean.Bank;
 import cl.buildersoft.ibk.bean.Customer;
+import cl.buildersoft.ibk.bean.Officer;
 import cl.buildersoft.ibk.business.service.bank.BankService;
 
 public class BankServiceImpl implements BankService {
@@ -15,6 +16,12 @@ public class BankServiceImpl implements BankService {
 		bank.setLogo(image);
 		bank.setName("Mock Bank Independient");
 		return bank;
+	}
+
+	@Override
+	public Officer getOfficer(HttpServletRequest request, Customer customer) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
