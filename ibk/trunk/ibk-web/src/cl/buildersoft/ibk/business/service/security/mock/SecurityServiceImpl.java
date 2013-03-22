@@ -28,8 +28,14 @@ public class SecurityServiceImpl implements SecurityService {
 
 	@Override
 	public LoginStatusEnum validatePassword(HttpServletRequest request, String userId, String password) {
-		// TODO Auto-generated method stub
-		return null;
+		LoginStatusEnum out = null;
+		if (userId.equals(password)) {
+			out = LoginStatusEnum.CORRECT;
+		} else {
+			out = LoginStatusEnum.INCORRECT;
+		}
+
+		return out;
 	}
 
 	@Override

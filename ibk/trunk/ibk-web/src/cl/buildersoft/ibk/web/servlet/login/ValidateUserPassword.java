@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import cl.buildersoft.ibk.bean.Bank;
+import cl.buildersoft.ibk.bean.Customer;
 import cl.buildersoft.ibk.bean.User;
 import cl.buildersoft.ibk.business.service.bank.BankService;
-import cl.buildersoft.ibk.business.service.customer.CustomerService;
 import cl.buildersoft.ibk.business.service.security.SecurityService;
+import cl.buildersoft.ibk.business.service.user.UserService;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 import cl.buildersoft.ibk.util.BSFactory;
 
@@ -45,13 +47,16 @@ public class ValidateUserPassword extends HttpServlet {
 				HttpSession session = request.getSession(true);
 
 				BankService bankService = factory.getBankService(config);
-				CustomerService customerService = factory.getCustomerService(config);
+				// CustomerService customerService =
+				// factory.getCustomerService(config);
+				UserService userService = factory.getUserService(config);
+				Customer customer = userService.getCustomer(request, user);
 
-//				Customer customer = customerService.getBasicInformation(request, userId);
+				Bank bank = bankService.getMainBank(request, customer);
 
-				session.setAttribute("Customer", null);
+				session.setAttribute("Customer", customer);
 				session.setAttribute("User", user);
-				session.setAttribute("MainBank", bankService.getMainBank(request, null));
+				session.setAttribute("MainBank", bank);
 				url = "/WEB-INF/jsp/main/main-page.jsp";
 			}
 

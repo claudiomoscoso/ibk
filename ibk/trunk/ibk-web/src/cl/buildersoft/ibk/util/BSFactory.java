@@ -6,6 +6,7 @@ import cl.buildersoft.framework.exception.BSConfigurationException;
 import cl.buildersoft.ibk.business.service.bank.BankService;
 import cl.buildersoft.ibk.business.service.customer.CustomerService;
 import cl.buildersoft.ibk.business.service.security.SecurityService;
+import cl.buildersoft.ibk.business.service.user.UserService;
 
 public class BSFactory {
 
@@ -22,9 +23,14 @@ public class BSFactory {
 		return (SecurityService) getService(context, "Security");
 	}
 
+	public UserService getUserService(ServletContext context) {
+		return (UserService) getService(context, "User");
+	}
+
 	private Object getService(ServletContext context, String serviceName) {
-		String coreName =  (String)context.getAttribute("cl.buildersoft.ibk.core.name");
-//		String coreName = context.getInitParameter("cl.buildersoft.ibk.core.name");
+		String coreName = (String) context.getAttribute("cl.buildersoft.ibk.core.name");
+		// String coreName =
+		// context.getInitParameter("cl.buildersoft.ibk.core.name");
 
 		String className = String.format("cl.buildersoft.ibk.business.service.%s.%s.%sServiceImpl", serviceName.toLowerCase(),
 				coreName, serviceName);
