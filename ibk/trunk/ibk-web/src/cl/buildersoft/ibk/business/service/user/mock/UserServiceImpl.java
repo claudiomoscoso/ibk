@@ -39,7 +39,9 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Customer getCustomer(HttpServletRequest request, User user) {
-		
-		return null;
+		Customer customer = new Customer();
+		customer.setId("" + Math.random() * 10000000);
+		customer.setName(getRandomName());
+		return customer;
 	}
 }
