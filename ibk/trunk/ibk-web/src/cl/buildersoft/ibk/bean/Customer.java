@@ -2,6 +2,7 @@ package cl.buildersoft.ibk.bean;
 
 
 public class Customer extends BSAbstractBean {
+	private static final long serialVersionUID = 5394835420493871216L;
 	private String id = null;
 	private String name = null;
 
