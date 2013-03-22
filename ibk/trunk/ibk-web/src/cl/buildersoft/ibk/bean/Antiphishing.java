@@ -1,6 +1,7 @@
 package cl.buildersoft.ibk.bean;
 
 public class Antiphishing extends BSAbstractBean {
+	private static final long serialVersionUID = -1788960402959514115L;
 	private String session = null;
 	private String image = null;
 	private String phrase = null;

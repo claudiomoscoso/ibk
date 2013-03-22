@@ -5,6 +5,7 @@ import java.util.Currency;
 import java.util.HashMap;
 
 public class Account extends BSAbstractBean {
+	private static final long serialVersionUID = -5695555924542635417L;
 	private Integer id = null;
 	private String number = null;
 	private Product product = null;

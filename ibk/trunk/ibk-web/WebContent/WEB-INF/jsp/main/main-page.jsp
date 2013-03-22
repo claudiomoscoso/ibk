@@ -6,7 +6,6 @@
  -->
 <%@ include file="/WEB-INF/jsp/common/header.jsp"%>
 
-Bienvenido
-
+Bienvenido a <%=getBankName(request) %>
 
 <%@ include file="/WEB-INF/jsp/common/footer.jsp"%>
