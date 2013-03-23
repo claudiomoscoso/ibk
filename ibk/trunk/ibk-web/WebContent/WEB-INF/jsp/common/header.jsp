@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <LINK rel="stylesheet" type="text/css"
-	href="x${pageContext.request.contextPath}/css/style.css?<%=Math.random() %>" />
+	href="${pageContext.request.contextPath}/css/style.css?<%=Math.random() %>" />
 <LINK rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/layout.css?<%=Math.random() %>" />
 
@@ -17,12 +17,11 @@ var contextPath = "${pageContext.request.contextPath}";
 </script>
 
 <script src="${pageContext.request.contextPath}/js/lib/jquery/jquery-1.8.1.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/home/main.js"></script>
 
-<title><%=getBankName(request)%></title>
+<title>Bienvenidos</title>
 
 </head>
-<body onload="javascript:loadBankInfo();">
+<body onload="javascript:onLoadPage();">
 
 	<div id="mainContainer">
 		<div id="header">
@@ -44,11 +43,12 @@ var contextPath = "${pageContext.request.contextPath}";
 
 		<div id="content">
 
-
-			<%!private String getBankName(HttpServletRequest request) {
+<!-- 
+			< % !private String getBankName(HttpServletRequest request) {
 		Bank mainBank = (Bank) request.getSession().getAttribute("MainBank");
 		String out = mainBank == null ? "" : mainBank.getName();
 
 		return out;
 	}
-	%>
+	% >
+	-->

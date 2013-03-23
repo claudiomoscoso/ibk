@@ -41,7 +41,7 @@ public class LoadBankInfo extends HttpServletAjax {
 //Bank bank =(Bank) session.getAttribute("Bank");
 		
  
- 
+		request.getRequestDispatcher("/WEB-INF/jsp/login/bank-info.jsp").forward(request, response);
 		
 	}
 
