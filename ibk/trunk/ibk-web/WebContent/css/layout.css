@@ -1,5 +1,16 @@
 @CHARSET "UTF-8";
 
+#mainContainer {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 3px;
+	/*
+	border:1px solid #333;*/
+	-moz-border-radius: 3px; /* Firefox */
+	-webkit-border-radius: 3px; /* Safari y Chrome */
+}
+
 #header {
 	width: 100%;
 	/*	background-color: #d0e4fe;*/
@@ -21,32 +32,16 @@ background:#eee;
 width:100%;
 padding:5px;*/
 }
-
-#mainContainer {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 3px;
-	/*
-	border:1px solid #333;*/
-	-moz-border-radius: 3px; /* Firefox */
-	-webkit-border-radius: 3px; /* Safari y Chrome */
+#bankInfo {
+	width: 40%;
+	border: 1px solid #333;
 }
-
-#logoBank {
-	height: 120px;border: 1px solid #333;
+#userInfo {
+	width: 40%;
+	border: 1px solid #333;
+	float: right;
 }
 
 #menu-1 {
 	
-}
-
-#bankInfo {
-	width: 50%;
-	border: 1px solid #333;
-}
-
-#userInfo {
-	width: 50%;
-	border: 1px solid #333;
 }
