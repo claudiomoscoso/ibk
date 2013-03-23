@@ -13,10 +13,11 @@
 	href="${pageContext.request.contextPath}/css/layout.css?<%=Math.random() %>" />
 
 <script type="text/javascript">
-var contextPath = "${pageContext.request.contextPath}";
+	var contextPath = "${pageContext.request.contextPath}";
 </script>
 
-<script src="${pageContext.request.contextPath}/js/lib/jquery/jquery-1.8.1.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/js/lib/jquery/jquery-1.8.1.min.js"></script>
 
 <title>Bienvenidos</title>
 
@@ -25,30 +26,19 @@ var contextPath = "${pageContext.request.contextPath}";
 
 	<div id="mainContainer">
 		<div id="header">
-
 			<div id="bankInfo">
-				<!-- 
-				<img id="logoBank"
-					src="data:image/jpeg;charset=utf-8;base64, < % = mainBank.getLogo()% >">
-				< %=mainBank.getName()% >
-				-->
+				 
 			</div>
 
-			<div id="userInfo">
-				<!-- < %=customerUser.getName()% > -->
-			</div>
+
+			<div id="userInfo">Juan Perez</div>
 
 		</div>
+		
+		
+		<!-- 
 		<div id="menu-1">menu 1</div>
-
+-->
 		<div id="content">
-
-<!-- 
-			< % !private String getBankName(HttpServletRequest request) {
-		Bank mainBank = (Bank) request.getSession().getAttribute("MainBank");
-		String out = mainBank == null ? "" : mainBank.getName();
-
-		return out;
-	}
-	% >
-	-->
+ 
+		
