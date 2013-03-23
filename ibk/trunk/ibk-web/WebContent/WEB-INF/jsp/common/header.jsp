@@ -3,14 +3,16 @@
 <%@page import="cl.buildersoft.ibk.bean.Bank"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <LINK rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/style.css?<%=Math.random() %>" />
+
 <LINK rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/layout.css?<%=Math.random() %>" />
+
 
 <script type="text/javascript">
 	var contextPath = "${pageContext.request.contextPath}";
@@ -18,27 +20,19 @@
 
 <script
 	src="${pageContext.request.contextPath}/js/lib/jquery/jquery-1.8.1.min.js"></script>
-
 <title>Bienvenidos</title>
-
 </head>
+
 <body onload="javascript:onLoadPage();">
 
 	<div id="mainContainer">
 		<div id="header">
-			<div id="bankInfo">
-				 
-			</div>
-
-
+			<div id="bankInfo">el banco</div>
 			<div id="userInfo">Juan Perez</div>
-
 		</div>
-		
-		
+
+
 		<!-- 
 		<div id="menu-1">menu 1</div>
 -->
 		<div id="content">
- 
-		

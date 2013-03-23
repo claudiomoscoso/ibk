@@ -1,43 +1,66 @@
 @CHARSET "UTF-8";
 
 #mainContainer {
+	height: 100%;
+	width: 90%;
+	border: 1px solid #111;
+	margin-left: auto;
+	margin-right: auto;
+	-moz-border-radius: 5px; /* Firefox */
+	-webkit-border-radius: 5px;
+}
+
+#header {
+	position: relative;
+	left:100px;
+	width: 80%;
+	border: 2px solid #777;
+}
+
+#bankInfo {float:left;
+	width: 45%;
+	border: 2px solid #a1a;
+}
+
+#userInfo { float:right;
+	width: 45%;
+	border: 2px solid #3a3;
+}
+
+#menu-1 {
+	
+}
+
+#content {
+	position: fixed;
+}
+
+
+/**
+#mainContainer {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 3px;
-	/*
-	border:1px solid #333;*/
-	-moz-border-radius: 3px; /* Firefox */
-	-webkit-border-radius: 3px; /* Safari y Chrome */
 }
 
 #header {
 	width: 100%;
-	/*	background-color: #d0e4fe;*/
+	 
 	font-family: 'Trebuchet MS';
 	font-size: 26px;
 	display: none_;
 	border-radius: 3px;
-	-moz-border-radius-topleft: 0px;
-	-moz-border-radius-topright: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	-moz-border-radius-bottomright: 0px;
-	-webkit-border-top-left-radius: 0px;
-	-webkit-border-top-right-radius: 10px;
-	-webkit-border-bottom-left-radius: 10px;
-	-webkit-border-bottom-right-radius: 0px;
 	border: 1px solid #333;
-	/* Otros estilos  
-background:#eee;
-width:100%;
-padding:5px;*/
 }
+
 #bankInfo {
-	width: 40%;
+	width: 100px;
 	border: 1px solid #333;
 }
+
 #userInfo {
-	width: 40%;
+	width: 100px;
 	border: 1px solid #333;
 	float: right;
 }
@@ -45,3 +68,4 @@ padding:5px;*/
 #menu-1 {
 	
 }
+*/

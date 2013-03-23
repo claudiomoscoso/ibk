@@ -1,5 +1,5 @@
 function onLoadPage() {
-	loadBankInfo();
+	//loadBankInfo();
 }
 
 function loadBankInfo() {
