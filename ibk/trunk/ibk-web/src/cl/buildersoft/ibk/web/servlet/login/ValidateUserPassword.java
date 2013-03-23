@@ -49,9 +49,7 @@ public class ValidateUserPassword extends HttpServlet {
 //				BankService bankService = factory.getBankService(config);
 				UserService userService = factory.getUserService(config);
 				Customer customer = userService.getCustomer(request, user);
-
 //				Bank bank = bankService.getMainBank(request, customer);
-
 				session.setAttribute("Customer", customer);
 				session.setAttribute("User", user);
 //				session.setAttribute("MainBank", bank);
