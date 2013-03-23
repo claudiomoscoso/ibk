@@ -46,20 +46,18 @@ public class ValidateUserPassword extends HttpServlet {
 			if (loginStatus.equals(LoginStatusEnum.CORRECT)) {
 				HttpSession session = request.getSession(true);
 
-				BankService bankService = factory.getBankService(config);
-				// CustomerService customerService =
-				// factory.getCustomerService(config);
+//				BankService bankService = factory.getBankService(config);
 				UserService userService = factory.getUserService(config);
 				Customer customer = userService.getCustomer(request, user);
 
-				Bank bank = bankService.getMainBank(request, customer);
+//				Bank bank = bankService.getMainBank(request, customer);
 
 				session.setAttribute("Customer", customer);
 				session.setAttribute("User", user);
-				session.setAttribute("MainBank", bank);
+//				session.setAttribute("MainBank", bank);
 				url = "/WEB-INF/jsp/main/main-page.jsp";
-			}else if(loginStatus.equals(LoginStatusEnum.INCORRECT)){
-				url = "/WEB-INF/jsp/main/main-page.jsp";
+			} else if (loginStatus.equals(LoginStatusEnum.INCORRECT)) {
+				url = "/WEB-INF/jsp/main/fail-login.jsp";
 			}
 
 		}
