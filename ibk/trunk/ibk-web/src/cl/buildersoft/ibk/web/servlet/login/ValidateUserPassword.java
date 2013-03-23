@@ -55,9 +55,9 @@ public class ValidateUserPassword extends HttpServlet {
 				session.setAttribute("Customer", customer);
 				session.setAttribute("User", user);
 //				session.setAttribute("MainBank", bank);
-				url = "/WEB-INF/jsp/main/main-page.jsp";
+				url = "/WEB-INF/jsp/login/main.jsp";
 			} else if (loginStatus.equals(LoginStatusEnum.INCORRECT)) {
-				url = "/WEB-INF/jsp/main/fail-login.jsp";
+				url = "/WEB-INF/jsp/login/fail.jsp";
 			}
 
 		}
