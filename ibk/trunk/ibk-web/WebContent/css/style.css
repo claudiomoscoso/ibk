@@ -1,4 +1,7 @@
 @CHARSET "UTF-8";
+
+
+/*
 input:focus, textarea:focus, select:focus
 {
 	BORDER-RIGHT: black 1px solid;
@@ -6,8 +9,7 @@ input:focus, textarea:focus, select:focus
     BORDER-LEFT: black 1px solid;
     BORDER-BOTTOM: black 1px solid;
     FONT-FAMILY: Tahoma;
-    /*BACKGROUND-COLOR: lemonchiffon;
-    COLOR: brown;*/
+  
 }
 
 input, textarea, select
@@ -21,12 +23,7 @@ input, textarea, select
     BACKGROUND-COLOR: #F0F0F0   
 }
 
-/*
-A:hover
-{
-    TEXT-DECORATION: none 
-}
-*/
+
 a.cCancel
 {
     FONT-SIZE: 10pt;
@@ -34,9 +31,9 @@ a.cCancel
     FONT-FAMILY: Tahoma;
     TEXT-DECORATION: none
 }
-/*
+/ *
 html { overflow-x:hidden; }
-*/
+* /
 BODY
 {
     FONT-FAMILY: msam10, Symbol, OpenSymbol, 'MT Extra', Marlett, 'Courier New';
@@ -263,3 +260,4 @@ div.contentScroll{
 	overflow: scroll;
 	position: relative;
 }
+*/
