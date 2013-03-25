@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-#mainContainer {
+#main {
 	border: 1px solid #000;
 	width: 90%;
 	margin: 0 auto;
@@ -17,11 +17,6 @@
 	float: left;
 	border: 1px solid #3a3;
 	width: 49%;
-	/*
-	float: left;
-	width: 45%;
-	border: 2px solid #a1a;
-	*/
 }
 
 #userInfo {
@@ -29,15 +24,10 @@
 	border: 1px solid #3a3;
 	width: 50%;
 	text-align: right;
-	/*
-	float: right;
-	width: 45%;
-	border: 2px solid #3a3;
-	*/
 }
 
 #menu-1 {
-	width: 17%;
+	width: 19%;
 	float: left;
 	border: 1px solid #000;
 }

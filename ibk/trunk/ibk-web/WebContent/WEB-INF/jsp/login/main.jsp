@@ -2,12 +2,10 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/jsp/common/header.jsp"%>
 
-
-<!-- 
 <script src="${pageContext.request.contextPath}/js/login/main.js?<%=Math.random() %>"></script>
 
-........... 
+*...........*
 
-< % @ include file="/WEB-INF/jsp/common/footer.jsp" % >
--->
+<%@ include file="/WEB-INF/jsp/common/footer.jsp" %>
+
 

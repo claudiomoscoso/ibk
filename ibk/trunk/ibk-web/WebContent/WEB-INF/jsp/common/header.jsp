@@ -35,7 +35,7 @@
 
 <body onload="javascript:initPage();">
 
-	<div id="mainContainer">
+	<div id="main">
 		<div id="header">
 			 
 			<div id="bankInfo">empresa</div>
@@ -46,11 +46,5 @@
 
 		<div id="menu-1">menu 1</div>
 
-		<div id="content">.........................</div>
-
-		<div id="footer">Copyright</div>
-
-	</div>
-
-</body>
-</html>
+		<div id="content">
+		
