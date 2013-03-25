@@ -4,26 +4,36 @@
 
 <script>
 	function initPage() {
-//alert( window.innerHeight );
+		//alert( window.innerHeight );
 
-//alert(document.getElementById("menu").style.height);
-document.getElementById("container").style.height = (window.innerHeight-1) + "px";
-//alert(document.getElementById("menu").style.height);
- 
+		//alert(document.getElementById("menu").style.height);
+
+		//alert("_" + document.getElementById("header").offsetHeight + "_");
+		var discount = document.getElementById("header").offsetHeight
+				+ document.getElementById("footer").offsetHeight;
+
+		var height = (window.innerHeight - discount) + "px";
+
+		document.getElementById("content").style.height = height;
+		document.getElementById("menu").style.height = height;
+
+		//alert(document.getElementById("menu").style.height);
+
 	}
 </script>
 </head>
 
 <body onload="javascript:initPage()">
 
-	<div id="container" style="width: 90%; ">
+	<div id="container" style="width: 90%; margin: 0 auto">
 
 		<div id="header" style="background-color: #FFA500;">
-			<h1 style="margin-bottom: 0;">Main Title of Web Page</h1>
+			<h1>Main Title of Web Page</h1>
+
 		</div>
 
 		<div id="menu"
-			style="background-color: #FFD700; height: 200px; width: 20%; float: left;">
+			style="background-color: #FFD700; width: 20%; float: left; height: 10%">
 			<b>Menu</b><br> HTML<br> CSS<br> JavaScript
 		</div>
 
@@ -32,14 +42,16 @@ document.getElementById("container").style.height = (window.innerHeight-1) + "px
 			Content goes here muchos<br> saltos<br> de<br> linea<br>
 			hay<br> aqui<br> por<br> estos <br> lados<br>
 			,<br> pero<br> es <br> para <br> hacer<br>
-			una <br> prueba<br>
+			una <br> prueba<br>ahora<br>bien<br>quieremos<br>agregar
+			<br>mas<br>texto<br>al<br>contenido<br>pues<br>simplemente<br>lo<br>hacemos<br>,<br>la
+			<br>idea <br>es<br>que<br>aparescan<br>las<br>barras<br>de<br>scroll<br>.<br>
 
 
 		</div>
 
 		<div id="footer"
-			style="background-color: #FFA500; clear: both; text-align: center;">
-			Copyright © W3Schools.com</div>
+			style="background-color: #FFA500; clear: both; text-align: center; height: 10%">
+			Copyright Co. W3Schools.com</div>
 
 	</div>
 

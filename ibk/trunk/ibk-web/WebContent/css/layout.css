@@ -1,40 +1,59 @@
 @CHARSET "UTF-8";
 
 #mainContainer {
-	height: 100%;
+	border: 1px solid #000;
 	width: 90%;
-	border: 1px solid #111;
-	margin-left: auto;
-	margin-right: auto;
-	-moz-border-radius: 5px; /* Firefox */
+	margin: 0 auto;
+	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
 
 #header {
-	position: relative;
-	left:100px;
-	width: 80%;
-	border: 2px solid #777;
+	clear: both;
+	border: 1px solid #777;
 }
 
-#bankInfo {float:left;
+#bankInfo {
+	float: left;
+	border: 1px solid #3a3;
+	width: 49%;
+	/*
+	float: left;
 	width: 45%;
 	border: 2px solid #a1a;
+	*/
 }
 
-#userInfo { float:right;
+#userInfo {
+	float: left;
+	border: 1px solid #3a3;
+	width: 50%;
+	text-align: right;
+	/*
+	float: right;
 	width: 45%;
 	border: 2px solid #3a3;
+	*/
 }
 
 #menu-1 {
-	
+	width: 17%;
+	float: left;
+	border: 1px solid #000;
 }
 
 #content {
-	position: fixed;
+	width: 80%;
+	float: left;
+	overflow: auto;
+	border: 1px solid #000;
 }
 
+#footer {
+	clear: both;
+	text-align: center;
+	border: 1px solid #000;
+}
 
 /**
 #mainContainer {

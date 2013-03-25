@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <LINK rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/style.css?<%=Math.random() %>" />
 
@@ -21,18 +22,35 @@
 <script
 	src="${pageContext.request.contextPath}/js/lib/jquery/jquery-1.8.1.min.js"></script>
 <title>Bienvenidos</title>
+<script language="javascript">
+	function initPage() {
+		try {
+			onLoadPage();
+		} catch (e) {
+
+		}
+	}
+</script>
 </head>
 
-<body onload="javascript:onLoadPage();">
+<body onload="javascript:initPage();">
 
 	<div id="mainContainer">
 		<div id="header">
-			<div id="bankInfo">el banco</div>
+			 
+			<div id="bankInfo">empresa</div>
 			<div id="userInfo">Juan Perez</div>
+			 
 		</div>
 
 
-		<!-- 
 		<div id="menu-1">menu 1</div>
--->
-		<div id="content">
+
+		<div id="content">.........................</div>
+
+		<div id="footer">Copyright</div>
+
+	</div>
+
+</body>
+</html>
