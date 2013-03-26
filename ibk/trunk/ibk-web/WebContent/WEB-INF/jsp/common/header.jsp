@@ -40,7 +40,7 @@
 			 
 			<div id="bankInfo"></div>
 			<div id="userInfo"></div>
-			 
+			 <div id="logout">Salir</div>
 		</div>
 
 

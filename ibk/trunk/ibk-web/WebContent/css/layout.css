@@ -15,28 +15,35 @@
 
 #bankInfo {
 	float: left;
-	border: 1px solid #3a3;
-	width: 49%;
+	border: 0px solid #3a3;
+	width: 45%;
 }
 
 #userInfo {
 	float: left;
-	border: 1px solid #3a3;
+	border: 0px solid #3a3;
 	width: 50%;
 	text-align: right;
 }
 
-#menu-1 {
-	width: 19%;
+#logout{
 	float: left;
-	border: 1px solid #000;
+	border: 0px solid #3a3;
+	width: 5%;
+	text-align: right;
+}
+
+#menu-1 {
+	width: 20%;
+	float: left;
+	border: 0px solid #000;
 }
 
 #content {
 	width: 80%;
 	float: left;
 	overflow: auto;
-	border: 1px solid #000;
+	border: 0px solid #000;
 }
 
 #footer {

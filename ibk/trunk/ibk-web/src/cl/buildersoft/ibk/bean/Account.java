@@ -1,6 +1,5 @@
 package cl.buildersoft.ibk.bean;
 
-import java.math.BigDecimal;
 import java.util.Currency;
 import java.util.HashMap;
 
@@ -9,8 +8,6 @@ public class Account extends BSAbstractBean {
 	private Integer id = null;
 	private String number = null;
 	private Product product = null;
-
-	private BigDecimal balance = null;
 	private Currency currency = null;
 	private HashMap<String, Object> attribute = null;
 	private String mask = null;
@@ -37,14 +34,6 @@ public class Account extends BSAbstractBean {
 
 	public void setProduct(Product product) {
 		this.product = product;
-	}
-
-	public BigDecimal getBalance() {
-		return balance;
-	}
-
-	public void setBalance(BigDecimal balance) {
-		this.balance = balance;
 	}
 
 	public Currency getCurrency() {
