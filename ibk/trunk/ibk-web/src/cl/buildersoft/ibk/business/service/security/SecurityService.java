@@ -9,7 +9,7 @@ import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 public interface SecurityService {
 	public User validateUserId(HttpServletRequest request, String userId);
 
-	public Antiphishing getAntiphishingInfo(HttpServletRequest request, String userId);
+	public Antiphishing getAntiphishingInfo(HttpServletRequest request, User user);
 
 	public void setAntiphishingInfo(HttpServletRequest request, String userId, Antiphishing antiphishing);
 

@@ -38,8 +38,8 @@
 	<div id="main">
 		<div id="header">
 			 
-			<div id="bankInfo">empresa</div>
-			<div id="userInfo">Juan Perez</div>
+			<div id="bankInfo"></div>
+			<div id="userInfo"></div>
 			 
 		</div>
 

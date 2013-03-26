@@ -1,5 +1,6 @@
 function onLoadPage() {
-	//loadBankInfo();
+	loadBankInfo();
+	loadUserInfo();
 }
 
 function loadBankInfo() {
@@ -10,5 +11,16 @@ function loadBankInfo() {
 
 	xhr.done(function(html) {
 		$("#bankInfo").append(html);
+	});
+}
+
+function loadUserInfo() {
+	var xhr = $.ajax({
+		url : contextPath + "/servlet/login/LoadUserInfo",
+		cache : false
+	});
+
+	xhr.done(function(html) {
+		$("#userInfo").append(html);
 	});
 }
