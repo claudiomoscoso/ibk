@@ -3,12 +3,14 @@ package cl.buildersoft.ibk.bean;
 import java.util.Calendar;
 
 public class User extends BSAbstractBean {
+		private static final long serialVersionUID = 221685245119541158L;
 	private Customer customer = null;
 	private String id = null;
 	private String name = null;
 	private Calendar lastLoginSuccess = null;
 	private Calendar lastLoginUnsuccess = null;
 	private String email = null;
+	
 	public Customer getCustomer() {
 		return customer;
 	}
@@ -44,5 +46,10 @@ public class User extends BSAbstractBean {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	@Override
+	public String toString() {
+		return "User [customer=" + customer + ", id=" + id + ", name=" + name + ", lastLoginSuccess=" + lastLoginSuccess
+				+ ", lastLoginUnsuccess=" + lastLoginUnsuccess + ", email=" + email + "]";
 	}
 }

@@ -16,9 +16,6 @@ import cl.buildersoft.ibk.business.service.user.UserService;
 import cl.buildersoft.ibk.util.BSFactory;
 import cl.buildersoft.ibk.web.servlet.HttpServletAjax;
 
-/**
- * Servlet implementation class LoadBankInfo
- */
 @WebServlet("/servlet/login/LoadUserInfo")
 public class LoadUserInfo extends HttpServletAjax {
 	private static final long serialVersionUID = -1840999424221143352L;
@@ -31,24 +28,30 @@ public class LoadUserInfo extends HttpServletAjax {
 		ServletContext config = request.getServletContext();
 		HttpSession session = request.getSession(false);
 
-		BSFactory factory = new BSFactory();
-		SecurityService securityService = factory.getSecurityService(config);
-		UserService userService = factory.getUserService(config);
-
 		User user = (User) session.getAttribute("User");
+		BSFactory factory = new BSFactory();
 
-		userService.loadBasicInformation(request, user);
-		Antiphishing antiphishing = securityService.getAntiphishingInfo(request, user);
+		if (!userFilled(user)) {
+			UserService userService = factory.getUserService(config);
+			userService.loadBasicInformation(request, user);
 
-		request.setAttribute("Antiphishing", antiphishing);
-		session.setAttribute("User", user);
-		// session.setAttribute("Bank", bank);
+			session.setAttribute("User", user);
 
-		// HttpSession session = request.getSession(false);
-		// Bank bank =(Bank) session.getAttribute("Bank");
+		}
 
+		Antiphishing antiphishing = (Antiphishing) session.getAttribute("Antiphishing");
+		if (antiphishing == null) {
+			SecurityService securityService = factory.getSecurityService(config);
+			antiphishing = securityService.getAntiphishingInfo(request, user);
+
+			session.setAttribute("Antiphishing", antiphishing);
+		}
 		request.getRequestDispatcher("/WEB-INF/jsp/login/user-info.jsp").forward(request, response);
 
+	}
+
+	private boolean userFilled(User user) {
+		return user.getEmail() != null;
 	}
 
 }

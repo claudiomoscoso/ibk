@@ -4,7 +4,7 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%
 	User user = (User) request.getSession(false).getAttribute("User");
-	Antiphishing antiphishing = (Antiphishing) request.getAttribute("Antiphishing");
+	Antiphishing antiphishing = (Antiphishing) request.getSession(false).getAttribute("Antiphishing");
 %>
 
 <table border="0">

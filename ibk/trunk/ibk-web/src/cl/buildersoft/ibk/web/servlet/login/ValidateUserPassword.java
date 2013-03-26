@@ -32,32 +32,40 @@ public class ValidateUserPassword extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userId = request.getParameter("user");
 		String password = request.getParameter("password");
-		String url = "";
+		String url = "/";
 
 		BSFactory factory = new BSFactory();
 		ServletContext config = request.getServletContext();
 		SecurityService securityService = factory.getSecurityService(config);
 
-		User user = securityService.validateUserId(request, userId);
+		HttpSession session = request.getSession(false);
+		User user = (User) session.getAttribute("User");
+
+		if (user == null) {
+			user = securityService.validateUserId(request, userId);
+		}
 
 		if (user != null) {
 			LoginStatusEnum loginStatus = securityService.validatePassword(request, userId, password);
 
 			if (loginStatus.equals(LoginStatusEnum.CORRECT)) {
-				HttpSession session = request.getSession(true);
+				session = request.getSession(true);
 
-//				BankService bankService = factory.getBankService(config);
-				UserService userService = factory.getUserService(config);
-				Customer customer = userService.getCustomer(request, user);
-//				Bank bank = bankService.getMainBank(request, customer);
-				session.setAttribute("Customer", customer);
+				if (user.getCustomer() == null) {
+					UserService userService = factory.getUserService(config);
+					Customer customer = userService.getCustomer(request, user);
+					user.setCustomer(customer);
+				}
+
 				session.setAttribute("User", user);
-//				session.setAttribute("MainBank", bank);
+
 				url = "/WEB-INF/jsp/login/main.jsp";
 			} else if (loginStatus.equals(LoginStatusEnum.INCORRECT)) {
 				url = "/WEB-INF/jsp/login/fail.jsp";
 			}
 
+		} else {
+			url = "/WEB-INF/jsp/login/not-found.jsp";
 		}
 
 		request.getRequestDispatcher(url).forward(request, response);
