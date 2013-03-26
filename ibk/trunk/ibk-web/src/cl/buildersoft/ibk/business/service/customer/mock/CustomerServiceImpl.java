@@ -1,6 +1,5 @@
 package cl.buildersoft.ibk.business.service.customer.mock;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Currency;
@@ -31,7 +30,7 @@ public class CustomerServiceImpl implements CustomerService {
 		for (Product product : products) {
 			for (int i = 0; i < 5; i++) {
 				account = new Account();
-				account.setBalance(BigDecimal.ZERO);
+
 				account.setCurrency(getCurrency(i));
 				String acctNumber = getAcctNumber(i);
 
