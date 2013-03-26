@@ -7,12 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import cl.buildersoft.framework.util.BSWeb;
 import cl.buildersoft.ibk.bean.Customer;
 import cl.buildersoft.ibk.bean.User;
+import cl.buildersoft.ibk.business.service.AbstractMockService;
 import cl.buildersoft.ibk.business.service.user.UserService;
 
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl  extends AbstractMockService implements UserService {
 	@Override
 	public void loadBasicInformation(HttpServletRequest request, User user) {
-
+waitService();
 		user.setId(BSWeb.randomString());
 		user.setLastLoginSuccess(Calendar.getInstance());
 		Calendar lastLoginUnsuccessDate = Calendar.getInstance();
