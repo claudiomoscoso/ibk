@@ -13,16 +13,13 @@
 
 <LINK rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/layout.css?<%=Math.random() %>" />
-
-
-<script type="text/javascript">
-	var contextPath = "${pageContext.request.contextPath}";
-</script>
-
+<title>Bienvenidos</title>
 <script
 	src="${pageContext.request.contextPath}/js/lib/jquery/jquery-1.8.1.min.js"></script>
-<title>Bienvenidos</title>
+
+
 <script language="javascript">
+	var contextPath = "${pageContext.request.contextPath}";
 	function initPage() {
 		try {
 			onLoadPage();
@@ -37,14 +34,13 @@
 
 	<div id="main">
 		<div id="header">
-			 
+
 			<div id="bankInfo"></div>
 			<div id="userInfo"></div>
-			 <div id="logout">Salir</div>
+			<div id="logout">Salir</div>
 		</div>
 
 
 		<div id="menu-1">menu 1</div>
 
 		<div id="content">
-		
