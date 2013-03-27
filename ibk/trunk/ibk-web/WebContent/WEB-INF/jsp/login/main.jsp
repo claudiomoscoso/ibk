@@ -6,12 +6,12 @@
 	src="${pageContext.request.contextPath}/js/login/main.js?<%=Math.random() %>"></script>
 <h1>Mis Cuentas</h1>
 <table border="1" style="width: 100%">
-
 	<tr>
 		<td>Cuenta</td>
 		<td>Moneda</td>
 		<td>Saldo Actual</td>
 		<td>Saldo Disponible</td>
+		<td>Acciones</td>
 	</tr>
 </table>
 

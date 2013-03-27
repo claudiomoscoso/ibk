@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.web.servlet.login;
+package cl.buildersoft.ibk.web.servlet.main;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import cl.buildersoft.ibk.business.service.bank.BankService;
 import cl.buildersoft.ibk.util.BSFactory;
 import cl.buildersoft.ibk.web.servlet.HttpServletAjax;
 
-@WebServlet("/servlet/login/LoadBankInfo")
+@WebServlet("/servlet/main/LoadBankInfo")
 public class LoadBankInfo extends HttpServletAjax {
 	private static final long serialVersionUID = -1840999424221143352L;
 
