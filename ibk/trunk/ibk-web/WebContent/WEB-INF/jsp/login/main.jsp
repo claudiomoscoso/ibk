@@ -6,13 +6,30 @@
 	src="${pageContext.request.contextPath}/js/login/main.js?<%=Math.random() %>"></script>
 <h1>Mis Cuentas</h1>
 <table border="1" style="width: 100%">
-	<tr>
-		<td>Cuenta</td>
-		<td>Moneda</td>
-		<td>Saldo Actual</td>
-		<td>Saldo Disponible</td>
-		<td>Acciones</td>
-	</tr>
+	<thead>
+		<tr>
+			<td>Cuenta</td>
+			<td>Moneda</td>
+			<td>Saldo Actual</td>
+			<td>Saldo Disponible</td>
+			<td>Acciones</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>xxx4500</td>
+			<td>USD</td>
+			<td>600</td>
+			<td>610</td>
+			<td><select /></td>
+		</tr>
+
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="5">Totales</td>
+		</tr>
+	</tfoot>
 </table>
 
 <span>"Saldo actual" es el saldo después de todas las

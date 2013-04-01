@@ -19,7 +19,6 @@ import cl.buildersoft.ibk.util.BSFactory;
 
 @WebServlet("/servlet/login/ValidateUserPassword")
 public class ValidateUserPassword extends HttpServlet {
-
 	private static final long serialVersionUID = 5937859167137968269L;
 
 	public ValidateUserPassword() {
