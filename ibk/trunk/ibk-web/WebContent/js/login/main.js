@@ -10,7 +10,7 @@ function loadBankInfo() {
 	});
 
 	xhr.done(function(html) {
-		$("#bankInfo").append(html);
+		$("#bankInfo").html(html);
 	});
 }
 
