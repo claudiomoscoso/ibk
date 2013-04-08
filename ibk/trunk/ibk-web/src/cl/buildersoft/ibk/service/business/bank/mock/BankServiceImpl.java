@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.business.service.bank.mock;
+package cl.buildersoft.ibk.service.business.bank.mock;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +10,8 @@ import cl.buildersoft.ibk.bean.Bank;
 import cl.buildersoft.ibk.bean.Customer;
 import cl.buildersoft.ibk.bean.Officer;
 import cl.buildersoft.ibk.bean.Product;
-import cl.buildersoft.ibk.business.service.AbstractMockService;
-import cl.buildersoft.ibk.business.service.bank.BankService;
+import cl.buildersoft.ibk.service.business.AbstractMockService;
+import cl.buildersoft.ibk.service.business.bank.BankService;
 
 public class BankServiceImpl extends AbstractMockService implements BankService {
 	// private String logo =

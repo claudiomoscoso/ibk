@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.business.service.account.mock;
+package cl.buildersoft.ibk.service.business.account.mock;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 import cl.buildersoft.framework.util.BSWeb;
 import cl.buildersoft.ibk.bean.Account;
 import cl.buildersoft.ibk.bean.Movement;
-import cl.buildersoft.ibk.business.service.account.AccountService;
+import cl.buildersoft.ibk.service.business.account.AccountService;
 
 public class AccountServiceImpl implements AccountService {
 
