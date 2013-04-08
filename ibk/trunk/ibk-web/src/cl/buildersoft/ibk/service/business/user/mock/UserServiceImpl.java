@@ -1,26 +1,25 @@
-package cl.buildersoft.ibk.business.service.user.mock;
+package cl.buildersoft.ibk.service.business.user.mock;
 
 import java.util.Calendar;
 
 import javax.servlet.http.HttpServletRequest;
 
-import cl.buildersoft.framework.util.BSWeb;
 import cl.buildersoft.ibk.bean.Customer;
 import cl.buildersoft.ibk.bean.User;
-import cl.buildersoft.ibk.business.service.AbstractMockService;
-import cl.buildersoft.ibk.business.service.user.UserService;
+import cl.buildersoft.ibk.service.business.AbstractMockService;
+import cl.buildersoft.ibk.service.business.user.UserService;
 
-public class UserServiceImpl  extends AbstractMockService implements UserService {
+public class UserServiceImpl extends AbstractMockService implements UserService {
 	@Override
 	public void loadBasicInformation(HttpServletRequest request, User user) {
-waitService();
-		user.setId(BSWeb.randomString());
+		waitService();
+		
 		user.setLastLoginSuccess(Calendar.getInstance());
 		Calendar lastLoginUnsuccessDate = Calendar.getInstance();
 		lastLoginUnsuccessDate.add(Calendar.DAY_OF_WEEK, 3);
 		user.setLastLoginUnsuccess(lastLoginUnsuccessDate);
 		user.setName(getRandomName());
-
+		user.setEmail("user@server.com");
 	}
 
 	private String getRandomName() {
@@ -40,6 +39,7 @@ waitService();
 
 	@Override
 	public Customer getCustomer(HttpServletRequest request, User user) {
+		waitService();
 		Customer customer = new Customer();
 		customer.setId("" + Math.random() * 10000000);
 		customer.setName(getRandomName());
