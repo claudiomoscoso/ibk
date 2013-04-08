@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.business.service.customer.mock;
+package cl.buildersoft.ibk.service.business.customer.mock;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -13,9 +13,9 @@ import cl.buildersoft.ibk.bean.Customer;
 import cl.buildersoft.ibk.bean.Product;
 import cl.buildersoft.ibk.bean.Profile;
 import cl.buildersoft.ibk.bean.User;
-import cl.buildersoft.ibk.business.service.bank.BankService;
-import cl.buildersoft.ibk.business.service.bank.mock.BankServiceImpl;
-import cl.buildersoft.ibk.business.service.customer.CustomerService;
+import cl.buildersoft.ibk.service.business.bank.BankService;
+import cl.buildersoft.ibk.service.business.bank.mock.BankServiceImpl;
+import cl.buildersoft.ibk.service.business.customer.CustomerService;
 
 public class CustomerServiceImpl implements CustomerService {
 
@@ -31,7 +31,7 @@ public class CustomerServiceImpl implements CustomerService {
 		for (Product product : products) {
 			for (int i = 0; i < 5; i++) {
 				account = new Account();
-				account.setBalance(BigDecimal.ZERO);
+//				account.setBalance(BigDecimal.ZERO);
 				account.setCurrency(getCurrency(i));
 				String acctNumber = getAcctNumber(i);
 
