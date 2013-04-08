@@ -1,12 +1,12 @@
-package cl.buildersoft.ibk.business.service.security.mock;
+package cl.buildersoft.ibk.service.business.security.mock;
 
 import javax.servlet.http.HttpServletRequest;
 
 import cl.buildersoft.ibk.bean.Antiphishing;
 import cl.buildersoft.ibk.bean.User;
-import cl.buildersoft.ibk.business.service.AbstractMockService;
-import cl.buildersoft.ibk.business.service.security.SecurityService;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
+import cl.buildersoft.ibk.service.business.AbstractMockService;
+import cl.buildersoft.ibk.service.business.security.SecurityService;
 
 public class SecurityServiceImpl extends AbstractMockService implements SecurityService {
 
