@@ -3,10 +3,10 @@ package cl.buildersoft.ibk.util;
 import javax.servlet.ServletContext;
 
 import cl.buildersoft.framework.exception.BSConfigurationException;
-import cl.buildersoft.ibk.business.service.bank.BankService;
-import cl.buildersoft.ibk.business.service.customer.CustomerService;
-import cl.buildersoft.ibk.business.service.security.SecurityService;
-import cl.buildersoft.ibk.business.service.user.UserService;
+import cl.buildersoft.ibk.service.business.bank.BankService;
+import cl.buildersoft.ibk.service.business.customer.CustomerService;
+import cl.buildersoft.ibk.service.business.security.SecurityService;
+import cl.buildersoft.ibk.service.business.user.UserService;
 
 public class BSFactory {
 
