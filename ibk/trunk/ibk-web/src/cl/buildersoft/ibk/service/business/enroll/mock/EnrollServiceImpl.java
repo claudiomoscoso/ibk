@@ -1,6 +1,6 @@
-package cl.buildersoft.ibk.business.service.enroll.mock;
+package cl.buildersoft.ibk.service.business.enroll.mock;
 
-import cl.buildersoft.ibk.business.service.enroll.EnrollService;
+import cl.buildersoft.ibk.service.business.enroll.EnrollService;
 
 public class EnrollServiceImpl implements EnrollService {
 
