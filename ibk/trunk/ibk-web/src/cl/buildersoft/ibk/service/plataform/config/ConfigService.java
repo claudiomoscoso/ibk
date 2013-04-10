@@ -4,14 +4,14 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import cl.buildersoft.ibk.bean.plataform.Group;
-import cl.buildersoft.ibk.bean.plataform.Value;
+import cl.buildersoft.ibk.bean.plataform.Feature;
+import cl.buildersoft.ibk.bean.plataform.Property;
 
 public interface ConfigService {
-	public Group getGroup(HttpServletRequest request, String key);
+	public Feature getFeature(HttpServletRequest request, String key);
 
-	public List<Group> listGroups(HttpServletRequest request);
+	public List<Feature> listFeatures(HttpServletRequest request);
 
-	public Value getValue(HttpServletRequest request, Group group, String key);
-
+	public Property getValue(HttpServletRequest request, Feature feature, String key);
+	/** Se definiran mas metodos */
 }

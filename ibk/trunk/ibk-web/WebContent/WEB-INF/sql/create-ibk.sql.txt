@@ -5,13 +5,13 @@ create table tUser (
 	cPassword	VARCHAR(64) COMMENT 'Codificada en md5'
 ) ENGINE=innoDB;
 
-create table tConfigGroup (
+create table tFeature (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
 	cName		VARCHAR(100) NOT NULL
 ) ENGINE=innoDB;
 
-create table tConfigValue (
+create table tProperty (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cGroup		BIGINT	NOT NULL ,
 	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
