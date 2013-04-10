@@ -4,10 +4,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import cl.buildersoft.ibk.bean.Bank;
-import cl.buildersoft.ibk.bean.Customer;
-import cl.buildersoft.ibk.bean.Officer;
-import cl.buildersoft.ibk.bean.Product;
+import cl.buildersoft.ibk.bean.business.Bank;
+import cl.buildersoft.ibk.bean.business.Customer;
+import cl.buildersoft.ibk.bean.business.Officer;
+import cl.buildersoft.ibk.bean.business.Product;
 
 public interface BankService {
 	public Bank getMainBank(HttpServletRequest request, Customer customer);

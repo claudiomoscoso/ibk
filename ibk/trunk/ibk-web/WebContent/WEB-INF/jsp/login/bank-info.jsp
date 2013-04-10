@@ -1,4 +1,4 @@
-<%@page import="cl.buildersoft.ibk.bean.Bank"%>
+<%@page import="cl.buildersoft.ibk.bean.business.Bank"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%
 	Bank bank = (Bank) request.getSession(false).getAttribute("Bank");

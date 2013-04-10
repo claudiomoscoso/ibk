@@ -6,10 +6,10 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import cl.buildersoft.framework.util.BSWeb;
-import cl.buildersoft.ibk.bean.Bank;
-import cl.buildersoft.ibk.bean.Customer;
-import cl.buildersoft.ibk.bean.Officer;
-import cl.buildersoft.ibk.bean.Product;
+import cl.buildersoft.ibk.bean.business.Bank;
+import cl.buildersoft.ibk.bean.business.Customer;
+import cl.buildersoft.ibk.bean.business.Officer;
+import cl.buildersoft.ibk.bean.business.Product;
 import cl.buildersoft.ibk.service.business.AbstractMockService;
 import cl.buildersoft.ibk.service.business.bank.BankService;
 

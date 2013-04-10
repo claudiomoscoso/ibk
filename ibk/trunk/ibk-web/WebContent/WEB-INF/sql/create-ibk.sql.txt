@@ -1,5 +1,3 @@
-/*use ibk*/
-
 create table tUser (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cUser 		VARCHAR(50) NOT NULL UNIQUE COMMENT 'Campo con el cual el usuario hace login, ideal es que sea el mail para que no se le olvide',
@@ -8,3 +6,8 @@ create table tUser (
 ) ENGINE=innoDB;
 
 
+create table tConfigGroup (
+	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
+	cName		VARCHAR(100) NOT NULL
+) ENGINE=innoDB;

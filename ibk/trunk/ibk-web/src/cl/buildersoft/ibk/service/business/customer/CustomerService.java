@@ -4,10 +4,10 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import cl.buildersoft.ibk.bean.Account;
-import cl.buildersoft.ibk.bean.Customer;
-import cl.buildersoft.ibk.bean.Profile;
-import cl.buildersoft.ibk.bean.User;
+import cl.buildersoft.ibk.bean.business.Account;
+import cl.buildersoft.ibk.bean.business.Customer;
+import cl.buildersoft.ibk.bean.business.Profile;
+import cl.buildersoft.ibk.bean.business.User;
 
 public interface CustomerService {
 //	public Customer getBasicInformation(HttpServletRequest request, User user);

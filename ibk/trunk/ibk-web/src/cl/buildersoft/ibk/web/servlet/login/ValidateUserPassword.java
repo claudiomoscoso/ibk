@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import cl.buildersoft.ibk.bean.Customer;
-import cl.buildersoft.ibk.bean.User;
+import cl.buildersoft.ibk.bean.business.Customer;
+import cl.buildersoft.ibk.bean.business.User;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 import cl.buildersoft.ibk.service.business.security.SecurityService;
 import cl.buildersoft.ibk.service.business.user.UserService;
