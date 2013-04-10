@@ -1,0 +1,3 @@
+ALTER TABLE tProperty
+ADD INDEX tProperty_cFeature (cFeature ASC),
+ADD CONSTRAINT Property_To_Feature FOREIGN KEY (cFeature) REFERENCES tFeature(cId);

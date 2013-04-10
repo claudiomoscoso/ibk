@@ -13,7 +13,7 @@ create table tFeature (
 
 create table tProperty (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	cGroup		BIGINT	NOT NULL ,
+	cFeature	BIGINT	NOT NULL,
 	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
 	cName		VARCHAR(100) NOT NULL
 ) ENGINE=innoDB;
