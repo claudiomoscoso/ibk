@@ -1,9 +1,0 @@
-DROP PROCEDURE if exists pLogin;
-DELIMITER $$
-
-CREATE PROCEDURE pLogin(IN pUser VARCHAR(50), IN pPassword VARCHAR(64))
-BEGIN
-	SELECT cId FROM tUser WHERE cUser = pUser AND cPassword = pPassword;
-END$$
-
-DELIMITER ;

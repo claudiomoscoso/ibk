@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@page import="cl.buildersoft.ibk.bean.Customer"%>
+<%@page import="cl.buildersoft.ibk.bean.business.Customer"%>
 
 <%@ include file="/WEB-INF/jsp/common/header.jsp"%>
 

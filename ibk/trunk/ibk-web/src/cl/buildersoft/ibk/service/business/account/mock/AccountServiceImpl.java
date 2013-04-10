@@ -7,8 +7,8 @@ import java.util.Currency;
 import java.util.List;
 
 import cl.buildersoft.framework.util.BSWeb;
-import cl.buildersoft.ibk.bean.Account;
-import cl.buildersoft.ibk.bean.Movement;
+import cl.buildersoft.ibk.bean.business.Account;
+import cl.buildersoft.ibk.bean.business.Movement;
 import cl.buildersoft.ibk.service.business.account.AccountService;
 
 public class AccountServiceImpl implements AccountService {

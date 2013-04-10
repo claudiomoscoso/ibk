@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import cl.buildersoft.ibk.bean.Antiphishing;
-import cl.buildersoft.ibk.bean.User;
+import cl.buildersoft.ibk.bean.business.Antiphishing;
+import cl.buildersoft.ibk.bean.business.User;
 import cl.buildersoft.ibk.service.business.security.SecurityService;
 import cl.buildersoft.ibk.service.business.user.UserService;
 import cl.buildersoft.ibk.util.BSFactory;

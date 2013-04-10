@@ -1,6 +1,6 @@
 <%@page import="cl.buildersoft.framework.util.BSDateTimeUtil"%>
-<%@page import="cl.buildersoft.ibk.bean.Antiphishing"%>
-<%@page import="cl.buildersoft.ibk.bean.User"%>
+<%@page import="cl.buildersoft.ibk.bean.business.Antiphishing"%>
+<%@page import="cl.buildersoft.ibk.bean.business.User"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%
 	User user = (User) request.getSession(false).getAttribute("User");

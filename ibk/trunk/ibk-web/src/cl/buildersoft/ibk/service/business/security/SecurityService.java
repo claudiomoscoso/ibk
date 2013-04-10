@@ -2,8 +2,8 @@ package cl.buildersoft.ibk.service.business.security;
 
 import javax.servlet.http.HttpServletRequest;
 
-import cl.buildersoft.ibk.bean.Antiphishing;
-import cl.buildersoft.ibk.bean.User;
+import cl.buildersoft.ibk.bean.business.Antiphishing;
+import cl.buildersoft.ibk.bean.business.User;
 import cl.buildersoft.ibk.enumeration.LoginStatusEnum;
 
 public interface SecurityService {

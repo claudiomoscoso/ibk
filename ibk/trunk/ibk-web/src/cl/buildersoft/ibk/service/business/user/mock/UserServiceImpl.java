@@ -4,8 +4,8 @@ import java.util.Calendar;
 
 import javax.servlet.http.HttpServletRequest;
 
-import cl.buildersoft.ibk.bean.Customer;
-import cl.buildersoft.ibk.bean.User;
+import cl.buildersoft.ibk.bean.business.Customer;
+import cl.buildersoft.ibk.bean.business.User;
 import cl.buildersoft.ibk.service.business.AbstractMockService;
 import cl.buildersoft.ibk.service.business.user.UserService;
 
