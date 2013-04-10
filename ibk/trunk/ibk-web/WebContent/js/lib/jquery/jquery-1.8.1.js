@@ -1,3 +1,6 @@
+/**
+ * http://jquery.com/download/
+ * */
 /*!
  * jQuery JavaScript Library v1.8.1
  * http://jquery.com/
