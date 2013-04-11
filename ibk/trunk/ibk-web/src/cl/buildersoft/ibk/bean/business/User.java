@@ -2,6 +2,8 @@ package cl.buildersoft.ibk.bean.business;
 
 import java.util.Calendar;
 
+import cl.buildersoft.ibk.bean.BSAbstractBean;
+
 public class User extends BSAbstractBean {
 		private static final long serialVersionUID = 221685245119541158L;
 	private Customer customer = null;

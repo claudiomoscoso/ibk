@@ -3,6 +3,8 @@ package cl.buildersoft.ibk.bean.business;
 import java.util.Currency;
 import java.util.HashMap;
 
+import cl.buildersoft.ibk.bean.BSAbstractBean;
+
 public class Account extends BSAbstractBean {
 	private static final long serialVersionUID = -5695555924542635417L;
 	private Integer id = null;

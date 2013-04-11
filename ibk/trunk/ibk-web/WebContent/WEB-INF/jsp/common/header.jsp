@@ -15,7 +15,7 @@
 	href="${pageContext.request.contextPath}/css/layout.css?<%=Math.random() %>" />
 <title>Bienvenidos</title>
 <script
-	src="${pageContext.request.contextPath}/js/lib/jquery/jquery-1.8.1.min.js"></script>
+	src="${pageContext.request.contextPath}/js/lib/jquery/jquery-1.8.1.js"></script>
 
 
 <script language="javascript">
