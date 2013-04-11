@@ -14,6 +14,7 @@
 	</servlet>
 
 	<resource-ref>
+	<!-- http://tomcat.apache.org/tomcat-7.0-doc/jndi-datasource-examples-howto.html#MySQL_DBCP_Example -->
 		<description>DB Connection</description>
 		<res-ref-name>jdbc/ibk</res-ref-name>
 		<res-type>javax.sql.DataSource</res-type>
