@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.bean.business;
+package cl.buildersoft.ibk.bean;
 
 import java.io.Serializable;
 

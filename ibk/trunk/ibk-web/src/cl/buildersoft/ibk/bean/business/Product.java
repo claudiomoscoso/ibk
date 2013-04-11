@@ -1,5 +1,7 @@
 package cl.buildersoft.ibk.bean.business;
 
+import cl.buildersoft.ibk.bean.BSAbstractBean;
+
 public class Product extends BSAbstractBean {
 	private static final long serialVersionUID = -1447304791775060514L;
 	private String key = null;

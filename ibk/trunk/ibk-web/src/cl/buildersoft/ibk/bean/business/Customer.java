@@ -1,5 +1,7 @@
 package cl.buildersoft.ibk.bean.business;
 
+import cl.buildersoft.ibk.bean.BSAbstractBean;
+
 
 public class Customer extends BSAbstractBean {
 	private static final long serialVersionUID = 5394835420493871216L;

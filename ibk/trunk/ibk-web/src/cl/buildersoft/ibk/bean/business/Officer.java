@@ -1,5 +1,7 @@
 package cl.buildersoft.ibk.bean.business;
 
+import cl.buildersoft.ibk.bean.BSAbstractBean;
+
 public class Officer extends BSAbstractBean {
 	private static final long serialVersionUID = 3929060432790671086L;
 	private String id = null;

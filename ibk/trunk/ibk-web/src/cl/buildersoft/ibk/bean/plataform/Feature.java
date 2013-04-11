@@ -1,6 +1,6 @@
 package cl.buildersoft.ibk.bean.plataform;
 
-import cl.buildersoft.ibk.bean.business.BSAbstractBean;
+import cl.buildersoft.ibk.bean.BSAbstractBean;
 
 public class Feature extends BSAbstractBean {
 	private static final long serialVersionUID = 4479488211856259457L;

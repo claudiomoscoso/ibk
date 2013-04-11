@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.HashMap;
 
+import cl.buildersoft.ibk.bean.BSAbstractBean;
+
 public class Movement extends BSAbstractBean {
 	private static final long serialVersionUID = -2140642321896843926L;
 	private String id = null;

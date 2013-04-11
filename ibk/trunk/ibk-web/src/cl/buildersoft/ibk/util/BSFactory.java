@@ -4,27 +4,34 @@ import javax.servlet.ServletContext;
 
 import cl.buildersoft.framework.exception.BSConfigurationException;
 import cl.buildersoft.ibk.service.business.bank.BankService;
+import cl.buildersoft.ibk.service.business.bank.mock.BankServiceImpl;
 import cl.buildersoft.ibk.service.business.customer.CustomerService;
+import cl.buildersoft.ibk.service.business.customer.mock.CustomerServiceImpl;
 import cl.buildersoft.ibk.service.business.security.SecurityService;
+import cl.buildersoft.ibk.service.business.security.mock.SecurityServiceImpl;
 import cl.buildersoft.ibk.service.business.user.UserService;
+import cl.buildersoft.ibk.service.business.user.mock.UserServiceImpl;
 
 public class BSFactory {
 
 	public BankService getBankService(ServletContext context) {
-		BankService out = (BankService) getService(context, "Bank");
-		return out;
+		return new BankServiceImpl();
+		// return (BankService) getService(context, "Bank");
 	}
 
 	public CustomerService getCustomerService(ServletContext context) {
-		return (CustomerService) getService(context, "Customer");
+		return new CustomerServiceImpl();
+		// return (CustomerService) getService(context, "Customer");
 	}
 
 	public SecurityService getSecurityService(ServletContext context) {
-		return (SecurityService) getService(context, "Security");
+		return new SecurityServiceImpl();
+		// return (SecurityService) getService(context, "Security");
 	}
 
 	public UserService getUserService(ServletContext context) {
-		return (UserService) getService(context, "User");
+		return new UserServiceImpl();
+		// return (UserService) getService(context, "User");
 	}
 
 	private Object getService(ServletContext context, String serviceName) {
