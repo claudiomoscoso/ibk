@@ -10,8 +10,8 @@ if [ -n "$1" ]; then
 	echo 'Creando tablas de sistema...(create-ibk.sql.txt)'
 	mysql -D$1 -t -u root -padmin --default-character-set=utf8 < create-ibk.sql.txt
 	
-	echo 'Creando reglas de plataforma...(rules-ibk.sql.txt)'
-	mysql -D$1 -t -u root -padmin --default-character-set=utf8 < rules-ibk.sql.txt
+#	echo 'Creando reglas de plataforma...(rules-ibk.sql.txt)'
+#	mysql -D$1 -t -u root -padmin --default-character-set=utf8 < rules-ibk.sql.txt
 #	echo 'Creando reglas de sistema...(rules-timectrl.sql.txt)'
 #	mysql -D$1 -t -u root -padmin --default-character-set=utf8 < rules-timectrl.sql.txt
 	

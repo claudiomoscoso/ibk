@@ -11,6 +11,8 @@ import cl.buildersoft.ibk.service.business.security.SecurityService;
 import cl.buildersoft.ibk.service.business.security.mock.SecurityServiceImpl;
 import cl.buildersoft.ibk.service.business.user.UserService;
 import cl.buildersoft.ibk.service.business.user.mock.UserServiceImpl;
+import cl.buildersoft.ibk.service.plataform.config.ConfigService;
+import cl.buildersoft.ibk.service.plataform.config.database.ConfigServiceImpl;
 
 public class BSFactory {
 
@@ -34,6 +36,10 @@ public class BSFactory {
 		// return (UserService) getService(context, "User");
 	}
 
+	public ConfigService getConfigService(ServletContext context){
+		return new ConfigServiceImpl();
+	}
+	
 	private Object getService(ServletContext context, String serviceName) {
 		String coreName = (String) context.getAttribute("cl.buildersoft.ibk.core.name");
 		// String coreName =

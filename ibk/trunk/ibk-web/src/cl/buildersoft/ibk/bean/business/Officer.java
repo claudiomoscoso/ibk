@@ -4,18 +4,10 @@ import cl.buildersoft.ibk.bean.BSAbstractBean;
 
 public class Officer extends BSAbstractBean {
 	private static final long serialVersionUID = 3929060432790671086L;
-	private String id = null;
+	private String key = null;
 	private String name = null;
 	private String email = null;
 	private String phone = null;
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
@@ -39,6 +31,14 @@ public class Officer extends BSAbstractBean {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
 	}
 
 }

@@ -41,7 +41,7 @@ public class UserServiceImpl extends AbstractMockService implements UserService 
 	public Customer getCustomer(HttpServletRequest request, User user) {
 		waitService();
 		Customer customer = new Customer();
-		customer.setId("" + Math.random() * 10000000);
+		customer.setKey("" + Math.random() * 10000000);
 		customer.setName(getRandomName());
 		return customer;
 	}

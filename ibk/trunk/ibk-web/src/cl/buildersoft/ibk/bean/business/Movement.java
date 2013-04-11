@@ -8,7 +8,7 @@ import cl.buildersoft.ibk.bean.BSAbstractBean;
 
 public class Movement extends BSAbstractBean {
 	private static final long serialVersionUID = -2140642321896843926L;
-	private String id = null;
+	private String key = null;
 	private Long number = null;
 	private Calendar date = null;
 	private String description = null;
@@ -17,14 +17,6 @@ public class Movement extends BSAbstractBean {
 	private BigDecimal credit = null;
 	private BigDecimal balance = null;
 	private HashMap<String, Object> attribute = null;
-	
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
 
 	public Long getNumber() {
 		return number;
@@ -88,6 +80,14 @@ public class Movement extends BSAbstractBean {
 
 	public void setAttribute(HashMap<String, Object> attribute) {
 		this.attribute = attribute;
+	}
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
 	}
 
 }

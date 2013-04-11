@@ -34,7 +34,7 @@ public class BankServiceImpl extends AbstractMockService implements BankService 
 		Officer out = new Officer();
 
 		out.setEmail("user@server.com");
-		out.setId(BSWeb.randomString());
+		out.setKey(BSWeb.randomString());
 		out.setName("Juan Inostroza Perez");
 		out.setPhone("05-2718.2282");
 

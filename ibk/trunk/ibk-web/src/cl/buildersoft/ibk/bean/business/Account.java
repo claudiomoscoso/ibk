@@ -7,20 +7,11 @@ import cl.buildersoft.ibk.bean.BSAbstractBean;
 
 public class Account extends BSAbstractBean {
 	private static final long serialVersionUID = -5695555924542635417L;
-	private Integer id = null;
 	private String number = null;
 	private Product product = null;
 	private Currency currency = null;
 	private HashMap<String, Object> attribute = null;
 	private String mask = null;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getNumber() {
 		return number;

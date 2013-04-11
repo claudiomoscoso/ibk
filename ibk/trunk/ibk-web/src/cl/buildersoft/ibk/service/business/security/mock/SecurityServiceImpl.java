@@ -18,7 +18,7 @@ public class SecurityServiceImpl extends AbstractMockService implements Security
 
 		if (userId.length() > 0) {
 			user = new User();
-			user.setId(userId);
+			user.setKey(userId);
 		}
 		return user;
 	}

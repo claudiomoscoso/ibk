@@ -8,13 +8,19 @@ create table tUser (
 create table tFeature (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
-	cName		VARCHAR(100) NOT NULL
+	cName		VARCHAR(100) NOT NULL,
+	cEnable		BIT NOT NULL DEFAULT FALSE
 ) ENGINE=innoDB;
 
 create table tProperty (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cFeature	BIGINT	NOT NULL,
 	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
-	cName		VARCHAR(100) NOT NULL
+	cName		VARCHAR(100) NOT NULL,
+	cValue		VARCHAR(100) 
 ) ENGINE=innoDB;
+
+ALTER TABLE tProperty
+ADD INDEX tProperty_cFeature (cFeature ASC),
+ADD CONSTRAINT Property_To_Feature FOREIGN KEY (cFeature) REFERENCES tFeature(cId);
 

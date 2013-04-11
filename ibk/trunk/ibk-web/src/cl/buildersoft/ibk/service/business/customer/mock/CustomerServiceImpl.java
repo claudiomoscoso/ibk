@@ -35,7 +35,7 @@ public class CustomerServiceImpl implements CustomerService {
 				account.setCurrency(getCurrency(i));
 				String acctNumber = getAcctNumber(i);
 
-				account.setId(idAccount++);
+//				account.setNumber(""+idAccount++);
 				account.setNumber(acctNumber);
 				account.setMask(createString(acctNumber.length() - 4, '*') + acctNumber.substring(acctNumber.length() - 4));
 				account.setProduct(product);
