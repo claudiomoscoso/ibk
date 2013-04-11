@@ -28,7 +28,7 @@ public class AccountServiceImpl implements AccountService {
 				m.setDebit(BigDecimal.ONE);
 				m.setDate(Calendar.getInstance());
 				m.setDescription("Movimiento de cuenta");
-				m.setId(BSWeb.randomString());
+				m.setKey(BSWeb.randomString());
 				m.setNumber((long) i);
 			}
 		}

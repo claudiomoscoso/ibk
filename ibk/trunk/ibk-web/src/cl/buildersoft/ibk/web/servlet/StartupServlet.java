@@ -10,6 +10,10 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
+import cl.buildersoft.ibk.bean.plataform.Feature;
+import cl.buildersoft.ibk.service.plataform.config.ConfigService;
+import cl.buildersoft.ibk.util.BSFactory;
+
 // @ WebServlet("/StartupServlet")
 public class StartupServlet extends HttpServlet {
 
@@ -21,24 +25,16 @@ public class StartupServlet extends HttpServlet {
 	}
 
 	public void init(ServletConfig config) throws ServletException {
+//		readFromPropertiesFile(config);
 
-		ServletContext ctx = config.getServletContext();
-		Properties props = new Properties();
-		try {
-			props.load(ctx.getResourceAsStream("/WEB-INF/bs-ibk-config.properties"));
-		} catch (IOException e) {
+		BSFactory factory = new BSFactory();
+		ConfigService cfg = factory.getConfigService(config.getServletContext());
+		Feature login = cfg.getFeature(null, "LOGIN");
 
-			e.printStackTrace();
-		}
-
-		Set<Object> keys = props.keySet();
-		String key = null;
-
-		Iterator<Object> itr = keys.iterator();
-		while (itr.hasNext()) {
-			key = (String) itr.next();
-			ctx.setAttribute(key, props.getProperty(key));
-		}
+		
+		System.out.println(login.toString());
+		
+		
 		
 		/**
 		 * <code>
@@ -51,20 +47,26 @@ public class StartupServlet extends HttpServlet {
 		}
  		 </code>
 		 */
-//		 System.out.println("Here!");
-	}
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	/**
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	private void readFromPropertiesFile(ServletConfig config) {
+		ServletContext ctx = config.getServletContext();
+		Properties props = new Properties();
+		try {
+			props.load(ctx.getResourceAsStream("/WEB-INF/bs-ibk-config.properties"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		Set<Object> keys = props.keySet();
+		String key = null;
+
+		Iterator<Object> itr = keys.iterator();
+		while (itr.hasNext()) {
+			key = (String) itr.next();
+			ctx.setAttribute(key, props.getProperty(key));
+		}
 	}
-*/
+
 }

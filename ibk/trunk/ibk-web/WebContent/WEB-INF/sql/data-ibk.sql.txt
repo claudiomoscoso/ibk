@@ -1,0 +1,6 @@
+INSERT INTO tFeature(cKey, cName, cEnable) VALUES('LOGIN', 'Login', true);
+SET @loginId = LAST_INSERT_ID();
+
+INSERT INTO tProperty(cFeature, cKey, cName, cValue) VALUES(@loginId, 'METHOD', 'Método', '1');
+INSERT INTO tProperty(cFeature, cKey, cName, cValue) VALUES(@loginId, 'URL_1', 'Usuario y clave', '/WEB-INF/jsp/portal/user-password.jsp');
+INSERT INTO tProperty(cFeature, cKey, cName, cValue) VALUES(@loginId, 'URL_2', 'Usuario primero', '/WEB-INF/jsp/portal/get-userId.jsp');

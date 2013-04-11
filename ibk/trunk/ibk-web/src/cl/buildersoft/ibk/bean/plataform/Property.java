@@ -4,6 +4,7 @@ import cl.buildersoft.ibk.bean.BSAbstractBean;
 
 public class Property extends BSAbstractBean {
 	private static final long serialVersionUID = -2405498142238661252L;
+	private final String TABLE = "tProperty";
 	private String key = null;
 	private String name = null;
 	private String value = null;
