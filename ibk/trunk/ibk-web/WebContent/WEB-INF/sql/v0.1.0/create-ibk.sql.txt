@@ -1,26 +1,76 @@
+/*******
 create table tUser (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cUser 		VARCHAR(50) NOT NULL UNIQUE COMMENT 'Campo con el cual el usuario hace login, ideal es que sea el mail para que no se le olvide',
 	cName		VARCHAR(100) NOT NULL COMMENT 'El nombre real del usuario',
 	cPassword	VARCHAR(64) COMMENT 'Codificada en md5'
 ) ENGINE=innoDB;
+********/
 
 create table tFeature (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
+	cKey 		VARCHAR(50) NOT NULL UNIQUE,
 	cName		VARCHAR(100) NOT NULL,
 	cEnable		BIT NOT NULL DEFAULT FALSE
 ) ENGINE=innoDB;
 
-create table tProperty (
+/** tComponent *****************/
+create table tComponent (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cFeature	BIGINT	NOT NULL,
 	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
 	cName		VARCHAR(100) NOT NULL,
-	cValue		VARCHAR(100) 
+	cType		BIGINT	NOT NULL
+) ENGINE=innoDB;
+
+ALTER TABLE tComponent
+ADD INDEX tComponent_cFeature (cFeature ASC),
+ADD CONSTRAINT Component_To_Feature FOREIGN KEY (cFeature) REFERENCES tFeature(cId);
+
+/** tProperty *****************/
+create table tProperty (
+	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cComponent	BIGINT	NOT NULL,
+	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
+	cName		VARCHAR(100) NOT NULL,
+	cOrder		INT	NOT NULL
 ) ENGINE=innoDB;
 
 ALTER TABLE tProperty
-ADD INDEX tProperty_cFeature (cFeature ASC),
-ADD CONSTRAINT Property_To_Feature FOREIGN KEY (cFeature) REFERENCES tFeature(cId);
+ADD INDEX tProperty_cComponent (cComponent ASC),
+ADD CONSTRAINT Property_To_Component FOREIGN KEY (cComponent) REFERENCES tComponent(cId);
+
+/** tValueString *****************/
+create table tValueString (
+	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cProperty	BIGINT	NOT NULL,
+	cValue 		VARCHAR(100) NOT NULL
+) ENGINE=innoDB;
+
+ALTER TABLE tValueString
+ADD INDEX tValueString_cProperty (cProperty ASC),
+ADD CONSTRAINT ValueString_To_Property FOREIGN KEY (cProperty) REFERENCES tProperty(cId);
+
+/** tValueBoolean *****************/
+create table tValueBoolean (
+	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cProperty	BIGINT	NOT NULL,
+	cValue 		BIT		NOT NULL
+) ENGINE=innoDB;
+
+ALTER TABLE tValueBoolean
+ADD INDEX tValueBoolean_cProperty (cProperty ASC),
+ADD CONSTRAINT ValueBoolean_To_Property FOREIGN KEY (cProperty) REFERENCES tProperty(cId);
+
+/** tValueNumber *****************/
+create table tValueNumber (
+	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cProperty	BIGINT	NOT NULL,
+	cValue 		BIT		NOT NULL
+) ENGINE=innoDB;
+
+ALTER TABLE tValueBoolean
+ADD INDEX tValueBoolean_cProperty (cProperty ASC),
+ADD CONSTRAINT ValueBoolean_To_Property FOREIGN KEY (cProperty) REFERENCES tProperty(cId);
+
 
