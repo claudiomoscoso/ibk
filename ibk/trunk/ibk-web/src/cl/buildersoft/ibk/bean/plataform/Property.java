@@ -5,32 +5,37 @@ import cl.buildersoft.ibk.bean.BSAbstractBean;
 public class Property extends BSAbstractBean {
 	private static final long serialVersionUID = -2405498142238661252L;
 	private final String TABLE = "tProperty";
-	private String key = null;
-	private String name = null;
-	private String value = null;
+	private Long component = null;
+	private Long type = null;
+	private Integer order = null;
 
-	public String getKey() {
-		return key;
+	public Long getComponent() {
+		return component;
 	}
 
-	public void setKey(String key) {
-		this.key = key;
+	public void setComponent(Long component) {
+		this.component = component;
 	}
 
-	public String getName() {
-		return name;
+	public Long getType() {
+		return type;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setType(Long type) {
+		this.type = type;
 	}
 
-	public String getValue() {
-		return value;
+	public Integer getOrder() {
+		return order;
 	}
 
-	public void setValue(String value) {
-		this.value = value;
+	public void setOrder(Integer order) {
+		this.order = order;
+	}
+
+	@Override
+	public String toString() {
+		return "Property [component=" + component + ", type=" + type + ", order=" + order + ", Id=" + getId() + "]";
 	}
 
 }

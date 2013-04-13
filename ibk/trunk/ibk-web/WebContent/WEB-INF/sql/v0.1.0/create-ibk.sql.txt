@@ -14,6 +14,12 @@ create table tFeature (
 	cEnable		BIT NOT NULL DEFAULT FALSE
 ) ENGINE=innoDB;
 
+/** tComponentType *****************/
+create table tComponentType (
+	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cName		VARCHAR(50) NOT NULL
+) ENGINE=innoDB;
+
 /** tComponent *****************/
 create table tComponent (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -25,20 +31,32 @@ create table tComponent (
 
 ALTER TABLE tComponent
 ADD INDEX tComponent_cFeature (cFeature ASC),
-ADD CONSTRAINT Component_To_Feature FOREIGN KEY (cFeature) REFERENCES tFeature(cId);
+ADD INDEX tComponent_cType (cType ASC),
+ADD CONSTRAINT Component_To_Feature FOREIGN KEY (cFeature) REFERENCES tFeature(cId),
+ADD CONSTRAINT Component_To_ComponentType FOREIGN KEY (cType) REFERENCES tComponentType(cId);
+
+/** tPropertyType *****************/
+create table tPropertyType (
+	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cKey 		VARCHAR(50) NOT NULL UNIQUE,
+	cName		VARCHAR(100) NOT NULL
+) ENGINE=innoDB;
 
 /** tProperty *****************/
 create table tProperty (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cComponent	BIGINT	NOT NULL,
-	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
-	cName		VARCHAR(100) NOT NULL,
+/*	cKey 		VARCHAR(50) NOT NULL UNIQUE ,
+	cName		VARCHAR(100) NOT NULL,*/
+	cType		BIGINT NOT NULL,
 	cOrder		INT	NOT NULL
 ) ENGINE=innoDB;
 
 ALTER TABLE tProperty
 ADD INDEX tProperty_cComponent (cComponent ASC),
-ADD CONSTRAINT Property_To_Component FOREIGN KEY (cComponent) REFERENCES tComponent(cId);
+ADD INDEX tProperty_cType (cType ASC),
+ADD CONSTRAINT Property_To_Component FOREIGN KEY (cComponent) REFERENCES tComponent(cId),
+ADD CONSTRAINT Property_To_PropertyType FOREIGN KEY (cType) REFERENCES tPropertyType(cId);
 
 /** tValueString *****************/
 create table tValueString (
@@ -66,11 +84,34 @@ ADD CONSTRAINT ValueBoolean_To_Property FOREIGN KEY (cProperty) REFERENCES tProp
 create table tValueNumber (
 	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	cProperty	BIGINT	NOT NULL,
-	cValue 		BIT		NOT NULL
+	cValue 		DECIMAL NOT NULL
 ) ENGINE=innoDB;
 
-ALTER TABLE tValueBoolean
-ADD INDEX tValueBoolean_cProperty (cProperty ASC),
-ADD CONSTRAINT ValueBoolean_To_Property FOREIGN KEY (cProperty) REFERENCES tProperty(cId);
+ALTER TABLE tValueNumber
+ADD INDEX tValueNumber_cProperty (cProperty ASC),
+ADD CONSTRAINT ValueNumber_To_Property FOREIGN KEY (cProperty) REFERENCES tProperty(cId);
 
+/** tOption *****************/
+create table tOption (
+	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cValue 		VARCHAR(100) NOT NULL,
+	cProperty	BIGINT NOT NULL
+) ENGINE=innoDB;
+
+ALTER TABLE tOption
+ADD INDEX tOption_cProperty (cProperty ASC),
+ADD CONSTRAINT Option_To_Property FOREIGN KEY (cProperty) REFERENCES tProperty(cId);
+
+/** tValueOption *****************/
+create table tValueOption (
+	cId			BIGINT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	cProperty	BIGINT	NOT NULL,
+	cOption 	BIGINT
+) ENGINE=innoDB;
+
+ALTER TABLE tValueOption
+ADD INDEX tValueOption_cProperty (cProperty ASC),
+ADD INDEX tValueOption_cOption (cOption ASC),
+ADD CONSTRAINT ValueOption_To_Option FOREIGN KEY (cOption) REFERENCES tOption(cId),
+ADD CONSTRAINT ValueOption_To_Property FOREIGN KEY (cProperty) REFERENCES tProperty(cId);
 
