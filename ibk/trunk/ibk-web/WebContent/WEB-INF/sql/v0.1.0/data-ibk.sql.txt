@@ -1,8 +1,34 @@
+INSERT INTO tComponentType(cName) VALUES('Configuración');
+SET @configTypeId = LAST_INSERT_ID();
+
+INSERT INTO tPropertyType(cKey, cName) VALUES('OPTION', 'Opciones');
+SET @propertyTypeOptionId = LAST_INSERT_ID();
+INSERT INTO tPropertyType(cKey, cName) VALUES('BOOLEAN', 'Lógico');
+SET @propertyTypeBooleanId = LAST_INSERT_ID();
+INSERT INTO tPropertyType(cKey, cName) VALUES('NUMBER', 'Numérico');
+SET @propertyTypeNumberId = LAST_INSERT_ID();
+INSERT INTO tPropertyType(cKey, cName) VALUES('STRING', 'Alfanumérico');
+SET @propertyTypeStringId = LAST_INSERT_ID();
+
 INSERT INTO tFeature(cKey, cName, cEnable) VALUES('LOGIN', 'Login', true);
 SET @loginId = LAST_INSERT_ID();
 
+INSERT INTO tComponent(cFeature, cKey, cName, cType) VALUES(@loginId, 'METHOD', 'Método de login', @configTypeId);
+SET @methodId = LAST_INSERT_ID();
+
+
+INSERT INTO tProperty(cComponent, cType, cOrder) VALUES(@methodId, @propertyTypeOptionId, 0);
+SET @propId = LAST_INSERT_ID();
+
+INSERT INTO tOption(cValue, cProperty) VALUES('Método 1', @propId);
+SET @method1Id = LAST_INSERT_ID();
+INSERT INTO tOption(cValue, cProperty) VALUES('Método 2', @propId);
+
+
+INSERT INTO tValueOption(cProperty, cOption) VALUES(@method1Id, @method1Id);
+
+
 /*
-INSERT INTO tProperty(cFeature, cKey, cName, cValue) VALUES(@loginId, 'METHOD', 'Método', '1');
-INSERT INTO tProperty(cFeature, cKey, cName, cValue) VALUES(@loginId, 'URL_1', 'Usuario y clave', '/WEB-INF/jsp/portal/user-password.jsp');
-INSERT INTO tProperty(cFeature, cKey, cName, cValue) VALUES(@loginId, 'URL_2', 'Usuario primero', '/WEB-INF/jsp/portal/get-userId.jsp');
+INSERT INTO tComponent(cFeature, cKey, cName, cType) VALUES(@loginId, 'URL_1', 'Usuario y clave', '/WEB-INF/jsp/portal/user-password.jsp');
+INSERT INTO tComponent(cFeature, cKey, cName, cType) VALUES(@loginId, 'URL_2', 'Usuario primero', '/WEB-INF/jsp/portal/get-userId.jsp');
 */
