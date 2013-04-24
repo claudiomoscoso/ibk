@@ -25,7 +25,6 @@ public interface ConfigService {
 
 	public List<PropertyType> listPropertyTypes();
 
-
 	public PropertyType getPropertyType(Long id);
 
 	public List<Option> getOptions(Property property);
