@@ -1,13 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <%@page import="cl.buildersoft.framework.util.BSWeb"%>
-<html>
+<html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 2004 08:21:57 GMT">
-
-<title>Login</title>
+<meta charset="utf-8">
+<title>Nuevo proyecto con Bootstrap 2.0</title>
+<meta name="description"
+	content="Artículo en GenbetaDev sobre Bootstrap 2.0">
+<meta name="author" content="Ricardo Borillo">
+<!—[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]—>
+<link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+	padding-top: 60px;
+}
+</style>
+<link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 </head>
 <body>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+
+
 	<form
 		action="${pageContext.request.contextPath}/servlet/login/ValidateUserPassword?<%=BSWeb.randomString() %>"
 		method="post">
@@ -15,5 +31,21 @@
 			type="password" name="password"> <br> <input
 			type="submit">
 	</form>
+
+
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -21,11 +21,10 @@ public class StartupServlet extends HttpServlet {
 
 	public StartupServlet() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public void init(ServletConfig config) throws ServletException {
-		// readFromPropertiesFile(config);
+		readFromPropertiesFile(config);
 
 		BSFactory factory = new BSFactory();
 		ConfigService cfg = factory.getConfigService(config.getServletContext());
