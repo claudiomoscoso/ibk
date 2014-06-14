@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/jsp/common/header.jsp"%>
 
 <script
-	src="${pageContext.request.contextPath}/js/login/main.js?<%=Math.random()%>"></script>
+	src="${pageContext.request.contextPath}/js/login/main.js%>"></script>
 
 <div class="container">
 	<div class="row">

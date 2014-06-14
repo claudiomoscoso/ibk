@@ -1,6 +1,6 @@
+<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -18,7 +18,9 @@
       <script src="${pageContext.request.contextPath}/bootstrap-3/ie/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+
+
+<body onLoad="onLoadPage();">
 
 	<div class="page-header">
 		<div class="row" id="header">
