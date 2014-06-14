@@ -26,11 +26,13 @@ public class StartupServlet extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		readFromPropertiesFile(config);
 
+		/**<code>
 		BSFactory factory = new BSFactory();
 		ConfigService cfg = factory.getConfigService(config.getServletContext());
 		Feature login = cfg.getFeature("LOGIN");
 
 		System.out.println(login.toString());
+		*/
 
 		/**
 		 * <code>

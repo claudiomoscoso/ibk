@@ -10,11 +10,12 @@ import cl.buildersoft.ibk.bean.business.Profile;
 import cl.buildersoft.ibk.bean.business.User;
 
 public interface CustomerService {
-//	public Customer getBasicInformation(HttpServletRequest request, User user);
+	// public Customer getBasicInformation(HttpServletRequest request, User
+	// user);
 
-	public List<Account> listAccounts(HttpServletRequest request, Customer customer, User user);
+	public List<Account> listAccounts(Customer customer, User user);
 
-	public Profile getProfile(HttpServletRequest request, Customer customer, User user);
+	public Profile getProfile(Customer customer, User user);
 
-	public String getPhoto(HttpServletRequest request, User user);
+	public String getPhoto(User user);
 }

@@ -9,7 +9,7 @@
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>StartupServlet</servlet-name>
-		<servlet-class>cl.buildersoft.ibk.web.servlet.StartupServlet</servlet-class>
+		<servlet-class>cl.buildersoft.ibk.servlet.util.StartupServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
