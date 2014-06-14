@@ -1,8 +1,7 @@
-</div>
 
-		<div id="footer">Copyright</div>
-
-	</div>
-
-</body>
+		<script
+			src="${pageContext.request.contextPath}/bootstrap-3/jquery/jquery.min.js"></script>
+		<script
+			src="${pageContext.request.contextPath}/bootstrap-3/js/bootstrap.min.js"></script>
+	</body>
 </html>

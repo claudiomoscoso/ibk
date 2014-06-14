@@ -1,46 +1,31 @@
-<%@page import="cl.buildersoft.ibk.bean.business.User"%>
-<%@page import="cl.buildersoft.ibk.bean.business.Customer"%>
-<%@page import="cl.buildersoft.ibk.bean.business.Bank"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${applicationScope.bankName}</title>
 
-<LINK rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/style.css?<%=Math.random() %>" />
-
-<LINK rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/layout.css?<%=Math.random() %>" />
-<title>Bienvenidos</title>
-<script
-	src="${pageContext.request.contextPath}/js/lib/jquery/jquery-1.8.1.js"></script>
+<link
+	href="${pageContext.request.contextPath}/bootstrap-3/css/bootstrap.min.css"
+	rel="stylesheet">
 
 
-<script language="javascript">
-	var contextPath = "${pageContext.request.contextPath}";
-	function initPage() {
-		try {
-			onLoadPage();
-		} catch (e) {
-
-		}
-	}
-</script>
+<!--[if lt IE 9]>
+      <script src="${pageContext.request.contextPath}/bootstrap-3/ie/html5shiv.js"></script>
+      <script src="${pageContext.request.contextPath}/bootstrap-3/ie/respond.min.js"></script>
+    <![endif]-->
 </head>
+<body>
 
-<body onload="javascript:initPage();">
-
-	<div id="main">
-		<div id="header">
-
-			<div id="bankInfo"></div>
-			<div id="userInfo"></div>
-			<div id="logout">Salir</div>
+	<div class="page-header">
+		<div class="row" id="header">
+			<div class="col-xs-6 btn-info" id="bankInfo">Bank Info</div>
+			<div class="col-xs-5 btn-success" id="userInfo">User Info</div>
+			<div class="col-xs-1 btn-info" id="logout">Salir</div>
 		</div>
-
-
+		<div class="row"></div>
 		<div id="menu-1">menu 1</div>
-
-		<div id="content">
+	</div>
