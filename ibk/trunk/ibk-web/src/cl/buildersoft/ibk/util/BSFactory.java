@@ -2,7 +2,6 @@ package cl.buildersoft.ibk.util;
 
 import javax.servlet.ServletContext;
 
-import cl.buildersoft.framework.exception.BSConfigurationException;
 import cl.buildersoft.ibk.service.business.bank.BankService;
 import cl.buildersoft.ibk.service.business.bank.mock.BankServiceImpl;
 import cl.buildersoft.ibk.service.business.customer.CustomerService;
@@ -39,12 +38,10 @@ public class BSFactory {
 	public ConfigService getConfigService(ServletContext context){
 		return new ConfigServiceImpl();
 	}
-	
+	/**<code>
 	private Object getService(ServletContext context, String serviceName) {
 		String coreName = (String) context.getAttribute("cl.buildersoft.ibk.core.name");
-		// String coreName =
-		// context.getInitParameter("cl.buildersoft.ibk.core.name");
-
+	
 		String className = String.format("cl.buildersoft.ibk.business.service.%s.%s.%sServiceImpl", serviceName.toLowerCase(),
 				coreName, serviceName);
 
@@ -56,6 +53,6 @@ public class BSFactory {
 		}
 
 		return out;
-	}
+	}</code>*/
 
 }

@@ -23,7 +23,6 @@ public class ValidateUserPassword extends HttpServlet {
 
 	public ValidateUserPassword() {
 		super();
-
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

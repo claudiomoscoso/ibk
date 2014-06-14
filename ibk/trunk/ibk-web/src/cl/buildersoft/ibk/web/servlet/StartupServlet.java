@@ -50,7 +50,7 @@ public class StartupServlet extends HttpServlet {
 		ServletContext ctx = config.getServletContext();
 		Properties props = new Properties();
 		try {
-			props.load(ctx.getResourceAsStream("/WEB-INF/bs-ibk-config.properties"));
+			props.load(ctx.getResourceAsStream("/WEB-INF/ibk.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

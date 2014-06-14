@@ -7,5 +7,6 @@ import cl.buildersoft.ibk.bean.business.User;
 
 public interface UserService {
 	public Customer getCustomer(HttpServletRequest request, User user);
-	public void loadBasicInformation (HttpServletRequest request, User user);
+
+	public void loadBasicInformation(HttpServletRequest request, User user);
 }
