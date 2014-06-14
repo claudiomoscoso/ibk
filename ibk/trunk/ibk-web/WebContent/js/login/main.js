@@ -5,7 +5,7 @@ function onLoadPage() {
 
 function loadBankInfo() {
 	var xhr = $.ajax({
-		url : contextPath + "/servlet/main/LoadBankInfo",
+		url :  + "/servlet/main/LoadBankInfo",
 		cache : false
 	});
 
