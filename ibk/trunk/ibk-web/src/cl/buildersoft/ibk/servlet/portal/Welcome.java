@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.web.portal;
+package cl.buildersoft.ibk.servlet.portal;
 
 import java.io.IOException;
 
