@@ -1,118 +1,51 @@
-<%@page import="cl.buildersoft.framework.util.BSWeb"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
 	request.getSession().invalidate();
 %>
-
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bank</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-
+<!-- Bootstrap -->
 <link
-	href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.css"
+	href="${pageContext.request.contextPath}/bootstrap-3/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="${pageContext.request.contextPath}/css/signin/signin.css"
 	rel="stylesheet">
 
-
-<style type="text/css">
-.form-signin {
-	max-width: 300px;
-	padding: 19px 29px 29px;
-	margin: 0 auto 20px;
-	background-color: #fff;
-	border: 1px solid #e5e5e5;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
-}
-
-.form-signin .form-signin-heading,.form-signin .checkbox {
-	margin-bottom: 10px;
-}
-
-.form-signin input[type="text"],.form-signin input[type="password"] {
-	font-size: 16px;
-	height: auto;
-	margin-bottom: 15px;
-	padding: 7px 9px;
-}
-</style>
-<title>Ingreso de usuario</title>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="${pageContext.request.contextPath}/bootstrap-3/ie/html5shiv.js"></script>
+      <script src="${pageContext.request.contextPath}/bootstrap-3/ie/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
 	<div class="container">
 
-		<div class="row">&nbsp;</div>
-		<div class="row">&nbsp;</div>
-
-		<form class="form-signin"
-			action="${pageContext.request.contextPath}/servlet/login/ValidateUserPassword?<%=BSWeb.randomString() %>"
+		<form class="form-signin" role="form" action="${pageContext.request.contextPath}/servlet/login/ValidateUserPassword?"
 			method="post">
-			<h2 class="form-signin-heading">My Bank</h2>
-
-			<input type="text" name="user" class="input-block-level"
-				placeholder="User id"> <input type="password"
-				name="password" class="input-block-level" placeholder="Clave de acceso">
-
-			<button class="btn btn-large btn-primary" type="submit">Acceder...</button>
-
+			<h2 class="form-signin-heading">My Bank Login</h2>
+			<input type="text" name="user" class="form-control" placeholder="Identificador de Usuario"
+				required autofocus> <input type="password" name="password"
+				class="form-control" placeholder="Clave secreta" required>
+			 
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
 		</form>
 
 	</div>
-</body>
 
-</html>
-
-
-
-<!-- 
-<!DOCTYPE html>
-< % @page import="cl.buildersoft.framework.util.BSWeb" % >
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<title>Acceso de usuario</title>
-<![if lt IE 9]>
-<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]>
-<link
-	href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css"
-	rel="stylesheet">
-<style>
-body {
-	padding-top: 60px;
-}
-</style>
-<link
-	href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-responsive.min.css"
-	rel="stylesheet">
-</head>
-<body>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		src="${pageContext.request.contextPath}/bootstrap-3/jquery/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script
-		src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
-
-
-	<form
-		action="${pageContext.request.contextPath}/servlet/login/ValidateUserPassword?<%=BSWeb.randomString() %>"
-		method="post">
-		Usuario: <input type="text" name="user"><br> Clave: <input
-			type="password" name="password"> <br> <input
-			type="submit">
-	</form>
+		src="${pageContext.request.contextPath}/bootstrap-3/js/bootstrap.min.js"></script>
 </body>
 </html>
--->
-
-
