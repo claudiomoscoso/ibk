@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.web.servlet.main;
+package cl.buildersoft.ibk.servlet.home;
 
 import java.io.IOException;
 
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpSession;
 import cl.buildersoft.ibk.bean.business.Bank;
 import cl.buildersoft.ibk.bean.business.Customer;
 import cl.buildersoft.ibk.service.business.bank.BankService;
+import cl.buildersoft.ibk.servlet.util.HttpServletAjax;
 import cl.buildersoft.ibk.util.BSFactory;
-import cl.buildersoft.ibk.web.servlet.HttpServletAjax;
 
 @WebServlet("/servlet/main/LoadBankInfo")
 public class LoadBankInfo extends HttpServletAjax {

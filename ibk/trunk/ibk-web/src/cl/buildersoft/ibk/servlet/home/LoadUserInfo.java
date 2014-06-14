@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.web.servlet.main;
+package cl.buildersoft.ibk.servlet.home;
 
 import java.io.IOException;
 
@@ -13,8 +13,8 @@ import cl.buildersoft.ibk.bean.business.Antiphishing;
 import cl.buildersoft.ibk.bean.business.User;
 import cl.buildersoft.ibk.service.business.security.SecurityService;
 import cl.buildersoft.ibk.service.business.user.UserService;
+import cl.buildersoft.ibk.servlet.util.HttpServletAjax;
 import cl.buildersoft.ibk.util.BSFactory;
-import cl.buildersoft.ibk.web.servlet.HttpServletAjax;
 
 @WebServlet("/servlet/main/LoadUserInfo")
 public class LoadUserInfo extends HttpServletAjax {

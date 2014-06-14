@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.web.servlet;
+package cl.buildersoft.ibk.servlet.util;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletResponse;

@@ -1,4 +1,4 @@
-package cl.buildersoft.ibk.web.servlet.login;
+package cl.buildersoft.ibk.servlet.login;
 
 import java.io.IOException;
 
