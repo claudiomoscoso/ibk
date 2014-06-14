@@ -34,7 +34,7 @@ public class LoadBankInfo extends HttpServletAjax {
 			// SecurityService securityService =
 			// factory.getSecurityService(config);
 			BankService bankService = factory.getBankService(context);
-			bank = bankService.getMainBank(request, (Customer) session.getAttribute("Customer"));
+			bank = bankService.getMainBank((Customer) session.getAttribute("Customer"));
 			session.setAttribute("Bank", bank);
 		}
 		// HttpSession session = request.getSession(false);

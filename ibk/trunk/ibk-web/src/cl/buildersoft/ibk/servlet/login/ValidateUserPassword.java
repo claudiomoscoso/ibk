@@ -34,38 +34,47 @@ public class ValidateUserPassword extends HttpServlet {
 		ServletContext config = request.getServletContext();
 		SecurityService securityService = factory.getSecurityService(config);
 
-		HttpSession session = request.getSession(false);
+		/**
+		 * <code>	HttpSession session = request.getSession(false);
 		User user = (User) session.getAttribute("User");
+</code>
+		 */
 
-		if (user == null) {
-			user = securityService.validateUserId(request, userId);
-		}
-
+		User user = securityService.validateUserId(userId);
+		HttpSession session = null;
 		if (user != null) {
-			LoginStatusEnum loginStatus = securityService.validatePassword(request, userId, password);
+			LoginStatusEnum loginStatus = securityService.validatePassword(userId, password);
 
-			if (loginStatus.equals(LoginStatusEnum.CORRECT)) {
+			switch (loginStatus) {
+			case CORRECT:
 				session = request.getSession(true);
 
 				if (user.getCustomer() == null) {
 					UserService userService = factory.getUserService(config);
-					Customer customer = userService.getCustomer(request, user);
+					Customer customer = userService.getCustomer(user);
 					user.setCustomer(customer);
 				}
 
 				session.setAttribute("User", user);
 
 				url = "/WEB-INF/jsp/login/main.jsp";
-			} else if (loginStatus.equals(LoginStatusEnum.INCORRECT)) {
-				url = "/WEB-INF/jsp/login/fail.jsp";
+				break;
+			case INCORRECT:
+				url = "/WEB-INF/jsp/login/fail.jsp";				
+				break;
+				
+			case BLOCKED:
+			case FIRST_LOGIN:
+			case PASSWORD_EXPIRED:
+				url = "/WEB-INF/jsp/login/not-found.jsp";
+			default:
+				break;
 			}
-
+			
 		} else {
 			url = "/WEB-INF/jsp/login/not-found.jsp";
 		}
-
 		request.getRequestDispatcher(url).forward(request, response);
-
 	}
 
 }

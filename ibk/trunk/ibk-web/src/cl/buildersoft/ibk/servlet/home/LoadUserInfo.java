@@ -33,7 +33,7 @@ public class LoadUserInfo extends HttpServletAjax {
 
 		if (!userFilled(user)) {
 			UserService userService = factory.getUserService(config);
-			userService.loadBasicInformation(request, user);
+			userService.loadBasicInformation(user);
 
 			session.setAttribute("User", user);
 
@@ -42,7 +42,7 @@ public class LoadUserInfo extends HttpServletAjax {
 		Antiphishing antiphishing = (Antiphishing) session.getAttribute("Antiphishing");
 		if (antiphishing == null) {
 			SecurityService securityService = factory.getSecurityService(config);
-			antiphishing = securityService.getAntiphishingInfo(request, user);
+			antiphishing = securityService.getAntiphishingInfo(user);
 
 			session.setAttribute("Antiphishing", antiphishing);
 		}
