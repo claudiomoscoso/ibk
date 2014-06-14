@@ -20,20 +20,14 @@
 </head>
 <body>
 
+<div class="container">
+	<h1>Acceso denegado</h1>
+	Puede continuar
+	<a href="${pageContext.request.contextPath}">aquí...</a>
 
-	<form
-		action="${pageContext.request.contextPath}/servlet/login/Validate?${new Date()}"
-		method="post">
-		Usuario: <input type="text" name="user"><br> Clave: 
-		
-		<input
-			type="password" name="password"> <br> 
-			<button type="button" class="btn btn-ttc">Aceptar</button>
-			
-			<input class="btn"
-			type="submit">
-	</form>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script
 		src="${pageContext.request.contextPath}/bootstrap-3/jquery/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->

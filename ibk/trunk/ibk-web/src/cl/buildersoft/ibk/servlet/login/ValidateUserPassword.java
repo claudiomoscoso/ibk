@@ -57,22 +57,22 @@ public class ValidateUserPassword extends HttpServlet {
 
 				session.setAttribute("User", user);
 
-				url = "/WEB-INF/jsp/login/main.jsp";
+				url = "/WEB-INF/jsp/home/main.jsp";
 				break;
 			case INCORRECT:
-				url = "/WEB-INF/jsp/login/fail.jsp";				
+				url = "/WEB-INF/jsp/home/fail.jsp";				
 				break;
 				
 			case BLOCKED:
 			case FIRST_LOGIN:
 			case PASSWORD_EXPIRED:
-				url = "/WEB-INF/jsp/login/not-found.jsp";
+				url = "/WEB-INF/jsp/home/not-found.jsp";
 			default:
 				break;
 			}
 			
 		} else {
-			url = "/WEB-INF/jsp/login/not-found.jsp";
+			url = "/WEB-INF/jsp/home/not-found.jsp";
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
