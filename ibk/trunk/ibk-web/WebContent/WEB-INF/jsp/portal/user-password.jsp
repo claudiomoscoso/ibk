@@ -31,7 +31,7 @@
 
 		<form class="form-signin" role="form" action="${pageContext.request.contextPath}/servlet/login/ValidateUserPassword?"
 			method="post">
-			<h2 class="form-signin-heading">My Bank Login</h2>
+			<h2 class="form-signin-heading">${applicationScope.bankName}</h2>
 			<input type="text" name="user" class="form-control" placeholder="Identificador de Usuario"
 				required autofocus> <input type="password" name="password"
 				class="form-control" placeholder="Clave secreta" required>

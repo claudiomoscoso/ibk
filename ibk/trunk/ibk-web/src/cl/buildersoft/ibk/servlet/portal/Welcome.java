@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Welcome extends HttpServlet {
 
 	private static final String LOGIN_METHOD = "cl.buildersoft.ibk.login.method";
+	private static final String BANK_NAME = "cl.buildersoft.ibk.bank.name";
 	private static final long serialVersionUID = 2429072429100718580L;
 
 	public Welcome() {
@@ -25,7 +26,9 @@ public class Welcome extends HttpServlet {
 		String method = (String) ctx.getAttribute(LOGIN_METHOD);
 
 		String url = (String) ctx.getAttribute(LOGIN_METHOD + "." + method);
-		
+		String bankName = (String) ctx.getAttribute(BANK_NAME);
+		request.setAttribute("BankName", bankName);
+
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 

@@ -10,10 +10,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
-import cl.buildersoft.ibk.bean.plataform.Feature;
-import cl.buildersoft.ibk.service.plataform.config.ConfigService;
-import cl.buildersoft.ibk.util.BSFactory;
-
 // @ WebServlet("/StartupServlet")
 public class StartupServlet extends HttpServlet {
 
