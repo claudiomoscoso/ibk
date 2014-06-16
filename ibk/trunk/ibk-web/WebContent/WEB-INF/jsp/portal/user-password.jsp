@@ -50,6 +50,16 @@
 			</div>
 			<div class="col-xs-4">&nbsp;</div>
 		</div>
+		<div class="row">
+		<div class="col-xs-12">&nbsp;</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">&nbsp;</div>
+			<div class="col-xs-4 text-center">
+				<a href="#" class="btn btn-warning" role="button">Crear cuenta</a>
+			</div>
+			<div class="col-xs-4">&nbsp;</div>
+		</div>
 
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
