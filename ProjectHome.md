@@ -1,0 +1,1 @@
+esta es una aplicacion para el trabajo en internet, dentro de otras cosas, la idea es que te ayude con tus finanzas personales
